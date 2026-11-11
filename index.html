@@ -1,0 +1,3898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jahno Udonde | Engineer, Mathematician &amp; Computer Scientist</title>
+<meta name="description" content="Jahno Udonde — Engineer, Mathematician and Computer Scientist from Akwa Ibom State, Nigeria. Software development, electrical &amp; solar engineering, cybersecurity, teaching and technology leadership.">
+<meta name="author" content="Jahno Udonde">
+<meta name="theme-color" content="#0b1220">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jahno Udonde | Engineer, Mathematician &amp; Computer Scientist">
+<meta property="og:description" content="Software • Engineering • Academy • Sales. Building reliable technology and power solutions from Nigeria.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f5a524'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='bold' text-anchor='middle' fill='%230b1220'%3EJU%3C/text%3E%3C/svg%3E">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } };</script>
+
+<style>
+:root{
+  --ink:#0b1220; --ink-900:#070c16; --ink-800:#101a2e; --ink-700:#16233d;
+  --gold:#f5a524; --gold-300:#ffd07a; --gold-600:#d98a0b;
+  --text:#e6ecf5; --muted:#93a3b8; --line:rgba(255,255,255,.09);
+  --r:16px; --maxw:1180px; --shadow:0 24px 60px -24px rgba(0,0,0,.75);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  background:var(--ink);color:var(--text);line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font-family:inherit}
+h1,h2,h3,h4,.font-display{font-family:'Sora','Inter',sans-serif;line-height:1.15;letter-spacing:-.02em}
+h1,h2,h3,h4{margin:0}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+[id]{scroll-margin-top:165px}
+::selection{background:var(--gold);color:#0b1220}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--ink-900)}
+::-webkit-scrollbar-thumb{background:#243349;border-radius:6px}
+::-webkit-scrollbar-thumb:hover{background:#33465f}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+.gold{color:var(--gold)}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.site-head{
+  position:sticky;top:0;z-index:80;background:rgba(7,12,22,.9);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.topbar{border-bottom:1px solid rgba(255,255,255,.05)}
+.topbar-row{display:flex;align-items:center;justify-content:space-between;gap:12px;height:38px}
+.clock{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#b9c6d8;min-width:0}
+.clock i{color:var(--gold);font-size:13px;flex-shrink:0}
+.clock time{font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:.02em;flex-shrink:0}
+.clock .sep{color:#3a4a60;flex-shrink:0}
+.clock .dtext{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+
+.cal-wrap{position:relative;flex-shrink:0}
+.cal-btn{
+  width:32px;height:32px;border-radius:9px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);color:#b9c6d8;display:grid;place-items:center;
+  cursor:pointer;transition:.2s;padding:0;font-size:14px;
+}
+.cal-btn:hover{color:var(--gold);border-color:rgba(245,165,36,.55);background:rgba(245,165,36,.08)}
+.cal-panel{
+  position:absolute;right:0;top:calc(100% + 10px);width:296px;max-width:calc(100vw - 32px);
+  background:var(--ink-800);border:1px solid var(--line);border-radius:14px;
+  padding:14px;box-shadow:var(--shadow);opacity:0;visibility:hidden;
+  transform:translateY(-8px);transition:opacity .18s,transform .18s,visibility .18s;z-index:95;
+}
+.cal-panel.open{opacity:1;visibility:visible;transform:none}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.cal-head span{font-family:'Sora';font-weight:700;font-size:14px;color:#fff}
+.cal-head button{
+  width:28px;height:28px;border-radius:8px;border:1px solid var(--line);
+  background:transparent;color:#b9c6d8;cursor:pointer;display:grid;place-items:center;
+  padding:0;transition:.2s;font-size:12px;
+}
+.cal-head button:hover{color:var(--gold);border-color:rgba(245,165,36,.5)}
+.cal-dow{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:4px}
+.cal-dow span{text-align:center;font-size:10.5px;font-weight:600;color:#63758e;text-transform:uppercase;letter-spacing:.06em}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-days button{
+  aspect-ratio:1;border:0;background:transparent;color:var(--text);border-radius:8px;
+  font-size:12.5px;cursor:pointer;padding:0;transition:.15s;font-variant-numeric:tabular-nums;
+}
+.cal-days button:hover{background:rgba(255,255,255,.09)}
+.cal-days button.mute{color:#3f4f66}
+.cal-days button.today{background:var(--gold);color:#0b1220;font-weight:700}
+.cal-days button.picked{outline:1px solid rgba(245,165,36,.7);color:var(--gold-300)}
+.cal-foot{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);text-align:center}
+.cal-foot button{background:transparent;border:0;color:var(--gold);cursor:pointer;font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:7px}
+.cal-foot button:hover{background:rgba(245,165,36,.1)}
+
+.navi{position:relative}
+.navi-row{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text);flex-shrink:0;min-width:0}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220;
+  display:grid;place-items:center;font-family:'Sora';font-weight:800;font-size:15px;letter-spacing:-.03em;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.brand-text strong{font-family:'Sora';font-weight:700;font-size:15.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-text small{font-size:10.5px;color:#7d8ea6;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu{display:flex;align-items:center;gap:4px}
+.menu a{
+  display:block;padding:9px 15px;border-radius:10px;color:#a9b8cc;
+  text-decoration:none;font-size:14.5px;font-weight:500;transition:.18s;white-space:nowrap;
+}
+.menu a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.menu a.is-active{color:var(--gold);background:rgba(245,165,36,.11)}
+.nav-cta a{background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220 !important;font-weight:700}
+.nav-cta a:hover{filter:brightness(1.09)}
+.burger{
+  display:none;width:42px;height:42px;border-radius:11px;border:1px solid var(--line);
+  background:rgba(255,255,255,.03);color:var(--text);cursor:pointer;place-items:center;
+  padding:0;font-size:19px;transition:.2s;flex-shrink:0;
+}
+.burger:hover{color:var(--gold);border-color:rgba(245,165,36,.5)}
+@media (max-width:900px){
+  .burger{display:grid}
+  .brand-text small{display:none}
+  .menu{
+    position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;
+    gap:2px;background:#070c16;border-bottom:1px solid var(--line);
+    padding:10px 16px 16px;box-shadow:0 26px 44px -26px rgba(0,0,0,.95);
+    transform:translateY(-8px);opacity:0;pointer-events:none;
+    transition:opacity .2s,transform .2s;max-height:75vh;overflow:auto;
+  }
+  .menu.open{transform:none;opacity:1;pointer-events:auto}
+  .menu a{padding:12px 14px;font-size:15px}
+  .nav-cta{margin-top:6px}
+  .nav-cta a{text-align:center;justify-content:center}
+}
+
+/* ============================================================
+   SHARED
+   ============================================================ */
+.page{display:none}
+.page.is-active{display:block;animation:fadeUp .4s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.section{padding:74px 0}
+.section-sm{padding:52px 0}
+.section-alt{background:rgba(7,12,22,.6);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.head-center{max-width:660px;margin:0 auto;text-align:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gold);
+  background:rgba(245,165,36,.1);border:1px solid rgba(245,165,36,.24);
+  padding:6px 14px;border-radius:999px;
+}
+.h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;margin-top:18px}
+.h3{font-size:clamp(22px,2.6vw,29px);font-weight:800}
+.lead{font-size:17px;color:#c3d0e0}
+.muted{color:var(--muted)}
+.small{font-size:13.5px}
+
+.grid{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(1,1fr)}
+.g3{grid-template-columns:repeat(1,1fr)}
+.g4{grid-template-columns:repeat(1,1fr)}
+@media (min-width:640px){.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:900px){.g3{grid-template-columns:repeat(3,1fr)}}
+@media (min-width:1024px){.g4{grid-template-columns:repeat(4,1fr)}}
+
+.btn-gold,.btn-out{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 23px;border-radius:12px;font-weight:600;font-size:14.5px;
+  text-decoration:none;border:1px solid transparent;cursor:pointer;transition:.2s;
+  line-height:1.2;text-align:center;
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220}
+.btn-gold:hover{filter:brightness(1.09);transform:translateY(-2px);color:#0b1220}
+.btn-out{background:rgba(255,255,255,.035);border-color:var(--line);color:var(--text)}
+.btn-out:hover{border-color:rgba(245,165,36,.6);color:var(--gold);transform:translateY(-2px)}
+
+.read-more{
+  display:inline-flex;align-items:center;gap:7px;margin-top:16px;
+  color:var(--gold);font-weight:600;font-size:14px;
+  text-decoration:none;transition:gap .2s;
+}
+.read-more:hover{gap:12px;color:var(--gold-300)}
+.read-more i{transition:transform .2s}
+.read-more:hover i{transform:translateX(2px)}
+
+.tile{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:28px;transition:.25s;height:100%;
+}
+.tile:hover{border-color:rgba(245,165,36,.36);transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.9)}
+.tile-icon{
+  width:50px;height:50px;border-radius:14px;display:grid;place-items:center;
+  background:rgba(245,165,36,.11);border:1px solid rgba(245,165,36,.24);
+  color:var(--gold);font-size:22px;
+}
+.tile h3{font-size:18px;font-weight:700;margin-top:20px}
+.tile p{margin-top:10px;font-size:14px;color:var(--muted)}
+
+.band{
+  background:linear-gradient(120deg,rgba(245,165,36,.14),rgba(245,165,36,.03) 45%,rgba(255,255,255,.02));
+  border:1px solid rgba(245,165,36,.26);border-radius:22px;padding:44px 38px;
+  display:flex;flex-wrap:wrap;gap:26px;align-items:center;justify-content:space-between;
+}
+.band h2{font-size:clamp(22px,2.8vw,32px);font-weight:800}
+.band p{margin-top:10px;color:#c3d0e0;max-width:560px;font-size:15px}
+
+/* ============================================================
+   HERO + SLIDER
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 80% -12%,rgba(245,165,36,.14),transparent 62%),
+    radial-gradient(700px 420px at 2% 108%,rgba(52,104,190,.14),transparent 62%);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:58px 58px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 74%);
+  mask-image:radial-gradient(ellipse at 50% 0%,#000,transparent 74%);
+}
+.hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr;gap:46px;align-items:center;
+  padding:60px 0 66px;
+}
+@media (min-width:1024px){
+  .hero-grid{grid-template-columns:1.02fr .98fr;gap:58px;padding:76px 0 80px}
+}
+.hero h1{font-size:clamp(30px,4.9vw,54px);font-weight:800;margin-top:20px}
+.hero .lead{margin-top:18px;max-width:560px}
+.hero p.body{margin-top:14px;color:var(--muted);max-width:560px;font-size:15px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:38px}
+@media (min-width:560px){.stats{grid-template-columns:repeat(4,1fr)}}
+.stat{
+  background:rgba(255,255,255,.03);border:1px solid var(--line);
+  border-radius:13px;padding:15px 13px;text-align:center;
+}
+.stat b{display:block;font-family:'Sora';font-size:22px;font-weight:800;color:var(--gold)}
+.stat span{display:block;font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.03em;line-height:1.3}
+
+.slider{
+  position:relative;border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);background:var(--ink-800);
+  box-shadow:var(--shadow);
+}
+.slider-frame{position:relative;aspect-ratio:4/3;width:100%}
+@media (min-width:1024px){.slider-frame{aspect-ratio:5/4}}
+.slide{
+  position:absolute;inset:0;opacity:0;pointer-events:none;
+  transition:opacity .85s ease;
+}
+.slide.is-active{opacity:1;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover}
+.slide-cap{
+  position:absolute;left:0;right:0;bottom:0;padding:64px 24px 26px;
+  background:linear-gradient(transparent,rgba(7,12,22,.96));
+}
+.slide-cap h3{font-size:18px;font-weight:700}
+.slide-cap p{font-size:13.5px;color:#a9b8cc;margin-top:5px}
+.slider-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(7,12,22,.72);border:1px solid rgba(255,255,255,.18);
+  color:#fff;display:grid;place-items:center;cursor:pointer;
+  transition:.2s;padding:0;font-size:15px;backdrop-filter:blur(6px);z-index:3;
+}
+.slider-arrow:hover{background:var(--gold);color:#0b1220;border-color:var(--gold)}
+.slider-arrow.prev{left:14px}
+.slider-arrow.next{right:14px}
+.slider-dots{
+  position:absolute;left:0;right:0;bottom:14px;
+  display:flex;justify-content:center;gap:7px;z-index:3;
+}
+.dot{
+  width:8px;height:8px;border-radius:999px;border:0;padding:0;
+  background:rgba(255,255,255,.34);cursor:pointer;transition:.25s;
+}
+.dot:hover{background:rgba(255,255,255,.6)}
+.dot.on{background:var(--gold);width:24px}
+.slider-bar{
+  position:absolute;left:0;right:0;bottom:0;height:3px;
+  background:rgba(255,255,255,.13);z-index:4;
+}
+.slider-bar i{
+  display:block;height:100%;width:0;background:var(--gold);
+  animation:prog 10s linear forwards;
+}
+@keyframes prog{from{width:0}to{width:100%}}
+
+/* ============================================================
+   PAGE PREVIEW CARDS
+   ============================================================ */
+.pcard{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:.25s;height:100%;display:flex;flex-direction:column;
+}
+.pcard:hover{border-color:rgba(245,165,36,.36);transform:translateY(-4px);box-shadow:0 22px 44px -26px rgba(0,0,0,.9)}
+.pcard-img{aspect-ratio:16/9;overflow:hidden;background:var(--ink-700)}
+.pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.pcard:hover .pcard-img img{transform:scale(1.05)}
+.pcard-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.tag{
+  display:inline-flex;align-items:center;gap:7px;align-self:flex-start;
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold);background:rgba(245,165,36,.1);
+  border:1px solid rgba(245,165,36,.22);
+  padding:5px 12px;border-radius:999px;
+}
+.pcard-body h3{font-size:20px;font-weight:700;margin-top:14px}
+.pcard-body p{margin-top:10px;font-size:14px;color:var(--muted);flex:1}
+
+/* ============================================================
+   PAGE HEAD
+   ============================================================ */
+.page-head{
+  padding:56px 0 34px;
+  background:radial-gradient(700px 340px at 12% -30%,rgba(245,165,36,.12),transparent 62%);
+  border-bottom:1px solid var(--line);
+}
+.page-head h1{font-size:clamp(28px,4.2vw,44px);font-weight:800;margin-top:16px}
+.page-head p{margin-top:14px;color:var(--muted);max-width:680px;font-size:15.5px}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.prose p{margin-top:16px;color:#c3d0e0;font-size:15.5px}
+.prose p:first-child{margin-top:0}
+.prose strong{color:#fff;font-weight:600}
+.timeline{position:relative;margin-top:30px;padding-left:30px}
+.timeline::before{
+  content:'';position:absolute;left:8px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--gold),rgba(245,165,36,.06));
+}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item::before{
+  content:'';position:absolute;left:-30px;top:5px;width:18px;height:18px;
+  border-radius:50%;background:var(--ink);border:2px solid var(--gold);
+}
+.tl-year{
+  display:inline-block;font-family:'Sora';font-weight:800;font-size:13px;color:var(--gold);
+  background:rgba(245,165,36,.1);border:1px solid rgba(245,165,36,.24);
+  padding:3px 11px;border-radius:999px;
+}
+.tl-item h4{font-size:17px;font-weight:700;margin-top:11px}
+.tl-item p{font-size:14px;color:var(--muted);margin-top:5px}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);
+  border:1px solid var(--line);padding:8px 15px;border-radius:11px;
+  font-size:13.5px;transition:.2s;
+}
+.chip:hover{border-color:rgba(245,165,36,.5);background:rgba(245,165,36,.07)}
+.chip i{font-size:16px}
+.skill-block{margin-top:34px}
+.skill-block:first-child{margin-top:0}
+.skill-block h4{
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:9px;
+}
+.skill-block h4::after{content:'';flex:1;height:1px;background:var(--line)}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.svc-nav-bar{
+  position:sticky;top:102px;z-index:60;
+  background:rgba(7,12,22,.94);backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.svc-nav{
+  display:flex;gap:8px;overflow-x:auto;padding:12px 0;
+  scrollbar-width:none;-ms-overflow-style:none;
+}
+.svc-nav::-webkit-scrollbar{display:none}
+.svc-nav a{
+  display:inline-flex;align-items:center;gap:8px;flex-shrink:0;
+  padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:600;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  color:#b9c6d8;text-decoration:none;transition:.2s;white-space:nowrap;
+}
+.svc-nav a:hover{border-color:rgba(245,165,36,.6);color:var(--gold);background:rgba(245,165,36,.08)}
+
+.svc-group{padding:66px 0}
+.svc-group + .svc-group{border-top:1px solid var(--line)}
+.svc-group:nth-child(odd){background:rgba(7,12,22,.45)}
+.svc-group-head{display:flex;align-items:flex-start;gap:18px;margin-bottom:38px}
+.svc-group-head .gi{
+  width:58px;height:58px;border-radius:16px;flex-shrink:0;
+  display:grid;place-items:center;font-size:25px;
+  background:linear-gradient(135deg,rgba(245,165,36,.22),rgba(245,165,36,.06));
+  border:1px solid rgba(245,165,36,.32);color:var(--gold);
+}
+.svc-group-head h2{font-size:clamp(23px,2.9vw,31px);font-weight:800}
+.svc-group-head p{font-size:15px;color:var(--muted);margin-top:7px;max-width:640px}
+
+.svc-card{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:.25s;height:100%;display:flex;flex-direction:column;
+}
+.svc-card:hover{border-color:rgba(245,165,36,.38);transform:translateY(-5px);box-shadow:0 24px 48px -28px rgba(0,0,0,.95)}
+.svc-media{
+  position:relative;aspect-ratio:16/10;overflow:hidden;
+  background:var(--ink-700);border-bottom:1px solid var(--line);
+}
+.svc-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.svc-card:hover .svc-media img{transform:scale(1.06)}
+.svc-badge{
+  position:absolute;top:12px;left:12px;z-index:4;
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(7,12,22,.78);border:1px solid rgba(245,165,36,.42);
+  color:var(--gold);font-size:17px;backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.svc-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.svc-body h3{font-size:17.5px;font-weight:700;line-height:1.35}
+.svc-body p{margin-top:11px;font-size:14px;color:var(--muted);line-height:1.75;flex:1}
+
+.svc-media[data-gallery]{cursor:pointer}
+.gal-slide{
+  position:absolute;inset:0;opacity:0;visibility:hidden;
+  transition:opacity .35s ease,visibility .35s ease;
+}
+.gal-slide.is-active{opacity:1;visibility:visible}
+.gal-slide img{width:100%;height:100%;object-fit:cover}
+.gal-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(7,12,22,.72);border:1px solid rgba(255,255,255,.22);
+  color:#fff;display:grid;place-items:center;cursor:pointer;
+  padding:0;font-size:13px;z-index:3;transition:background .2s,color .2s,border-color .2s;
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.gal-arrow:hover{background:var(--gold);color:#0b1220;border-color:var(--gold)}
+.gal-arrow:active{transform:translateY(-50%) scale(.92)}
+.gal-prev{left:10px}
+.gal-next{right:10px}
+.gal-dots{
+  position:absolute;left:0;right:0;bottom:10px;
+  display:flex;justify-content:center;gap:6px;z-index:3;
+  pointer-events:none;
+}
+.gal-dot{
+  width:7px;height:7px;border-radius:999px;border:0;padding:0;
+  background:rgba(255,255,255,.42);cursor:pointer;
+  transition:background .25s,width .25s;pointer-events:auto;
+}
+.gal-dot:hover{background:rgba(255,255,255,.72)}
+.gal-dot.on{background:var(--gold);width:18px}
+
+.svc-note{
+  display:flex;align-items:flex-start;gap:11px;margin-top:18px;
+  padding:14px 16px;border-radius:12px;
+  background:rgba(245,165,36,.06);border:1px solid rgba(245,165,36,.2);
+  font-size:13.5px;color:#c3d0e0;
+}
+.svc-note i{color:var(--gold);font-size:15px;margin-top:3px;flex-shrink:0}
+
+.step{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);padding:26px;
+  position:relative;height:100%;transition:.22s;
+}
+.step:hover{border-color:rgba(245,165,36,.34);transform:translateY(-3px)}
+.step-num{
+  font-family:'Sora';font-weight:800;font-size:13px;color:var(--gold);
+  background:rgba(245,165,36,.1);border:1px solid rgba(245,165,36,.24);
+  display:inline-block;padding:3px 12px;border-radius:999px;
+}
+.step h4{font-size:16.5px;font-weight:700;margin-top:14px}
+.step p{margin-top:9px;font-size:13.8px;color:var(--muted)}
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+.featured{
+  display:grid;grid-template-columns:1fr;gap:0;
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:20px;overflow:hidden;
+  transition:.25s;
+}
+.featured:hover{border-color:rgba(245,165,36,.4)}
+@media (min-width:900px){.featured{grid-template-columns:1.05fr 1fr}}
+.featured-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--ink-700)}
+@media (min-width:900px){.featured-media{aspect-ratio:auto;height:100%;min-height:420px}}
+.featured-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.featured:hover .featured-media img{transform:scale(1.04)}
+.featured-flag{
+  position:absolute;top:16px;left:16px;z-index:3;
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:#0b1220;background:linear-gradient(135deg,var(--gold),var(--gold-600));
+  padding:6px 13px;border-radius:999px;
+}
+.featured-body{padding:32px;display:flex;flex-direction:column;justify-content:center}
+@media (min-width:900px){.featured-body{padding:44px}}
+.featured-body h2{font-size:clamp(22px,2.9vw,32px);font-weight:800;margin-top:16px;line-height:1.25}
+.featured-body h2 a{text-decoration:none}
+.featured-body h2 a:hover{color:var(--gold)}
+.featured-body > p{margin-top:16px;font-size:15px;color:#b7c4d6;line-height:1.8}
+
+.post-meta{display:flex;align-items:center;flex-wrap:wrap;gap:14px;font-size:12.5px;color:#7d8ea6;letter-spacing:.02em}
+.post-meta span{display:inline-flex;align-items:center;gap:6px}
+.post-meta i{color:var(--gold);font-size:13px}
+.cat-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--gold);background:rgba(245,165,36,.1);
+  border:1px solid rgba(245,165,36,.24);
+  padding:5px 12px;border-radius:999px;
+}
+
+.filter-bar{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  justify-content:space-between;margin-bottom:34px;
+  padding-bottom:24px;border-bottom:1px solid var(--line);
+}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:9px 16px;border-radius:999px;font-size:13.5px;font-weight:600;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  color:#b9c6d8;cursor:pointer;transition:.2s;white-space:nowrap;
+}
+.filters button:hover{border-color:rgba(245,165,36,.55);color:var(--gold);background:rgba(245,165,36,.07)}
+.filters button.on{background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220;border-color:transparent}
+.filters button.on i{color:#0b1220}
+.search-box{position:relative;flex:1;min-width:230px;max-width:330px}
+.search-box i{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:#5d6d84;font-size:15px;pointer-events:none;
+}
+.search-box input{
+  width:100%;padding:11px 16px 11px 40px;border-radius:11px;
+  background:rgba(7,12,22,.6);border:1px solid var(--line);
+  color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:.2s;
+}
+.search-box input:focus{border-color:rgba(245,165,36,.6);box-shadow:0 0 0 3px rgba(245,165,36,.12)}
+.search-box input::placeholder{color:#5d6d84}
+
+.result-line{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:10px;margin-bottom:24px;
+  font-size:13.5px;color:var(--muted);
+}
+.result-line b{color:var(--gold)}
+
+.post-card{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:.25s;height:100%;display:flex;flex-direction:column;
+}
+.post-card:hover{border-color:rgba(245,165,36,.4);transform:translateY(-5px);box-shadow:0 24px 48px -28px rgba(0,0,0,.95)}
+.post-media{
+  position:relative;aspect-ratio:16/10;overflow:hidden;
+  background:var(--ink-700);border-bottom:1px solid var(--line);
+}
+.post-media img{width:100%;height:100%;object-fit:cover;transition:transform .55s}
+.post-card:hover .post-media img{transform:scale(1.06)}
+.post-cat{
+  position:absolute;top:12px;left:12px;z-index:3;
+  font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;
+  color:#0b1220;background:linear-gradient(135deg,var(--gold),var(--gold-600));
+  padding:5px 11px;border-radius:999px;
+}
+.post-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.post-body h3{font-size:17.5px;font-weight:700;line-height:1.4;margin-top:14px}
+.post-body h3 a{text-decoration:none;transition:.2s}
+.post-body h3 a:hover{color:var(--gold)}
+.post-body > p{margin-top:12px;font-size:14px;color:var(--muted);line-height:1.75;flex:1}
+
+.empty{
+  display:none;text-align:center;padding:70px 20px;
+  background:rgba(255,255,255,.02);border:1px dashed var(--line);border-radius:var(--r);
+}
+.empty i{font-size:40px;color:#3f4f66}
+.empty h3{font-size:19px;font-weight:700;margin-top:18px}
+.empty p{margin-top:10px;color:var(--muted);font-size:14.5px}
+
+.author{
+  display:grid;grid-template-columns:1fr;gap:26px;align-items:center;
+  background:linear-gradient(135deg,rgba(245,165,36,.09),rgba(255,255,255,.02));
+  border:1px solid rgba(245,165,36,.22);border-radius:20px;padding:34px;
+}
+@media (min-width:760px){.author{grid-template-columns:auto 1fr}}
+.author-photo{
+  width:110px;height:110px;border-radius:50%;overflow:hidden;flex-shrink:0;
+  border:3px solid rgba(245,165,36,.45);background:var(--ink-700);
+}
+.author-photo img{width:100%;height:100%;object-fit:cover}
+.author h3{font-size:20px;font-weight:800}
+.author p{margin-top:11px;font-size:14.5px;color:#c3d0e0;line-height:1.75}
+
+.subscribe{
+  background:linear-gradient(135deg,rgba(245,165,36,.13),rgba(255,255,255,.02));
+  border:1px solid rgba(245,165,36,.26);border-radius:20px;
+  padding:38px;display:grid;gap:24px;
+}
+@media (min-width:860px){.subscribe{grid-template-columns:1fr 1fr;align-items:center;gap:44px}}
+.sub-form{display:flex;gap:10px;flex-wrap:wrap}
+.sub-form input{
+  flex:1;min-width:200px;padding:13px 16px;border-radius:12px;
+  background:rgba(7,12,22,.6);border:1px solid var(--line);
+  color:var(--text);font-size:14.5px;font-family:inherit;outline:none;transition:.2s;
+}
+.sub-form input:focus{border-color:rgba(245,165,36,.65);box-shadow:0 0 0 3px rgba(245,165,36,.12)}
+.sub-form input::placeholder{color:#5d6d84}
+.sub-note{font-size:12.5px;color:#7d8ea6;margin-top:12px}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.ct-card{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:var(--r);
+  padding:24px;display:flex;gap:16px;align-items:flex-start;
+  text-decoration:none;transition:.22s;height:100%;
+}
+.ct-card:hover{border-color:rgba(245,165,36,.42);transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(0,0,0,.9)}
+.ct-icon{
+  width:48px;height:48px;border-radius:13px;flex-shrink:0;
+  display:grid;place-items:center;font-size:20px;
+  background:rgba(245,165,36,.11);border:1px solid rgba(245,165,36,.24);
+  color:var(--gold);transition:.22s;
+}
+.ct-card:hover .ct-icon{background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220;border-color:transparent}
+.ct-card h4{font-size:15.5px;font-weight:700}
+.ct-card p{font-size:13.5px;color:var(--muted);margin-top:4px;word-break:break-word;line-height:1.55}
+.ct-arrow{margin-left:auto;color:#5d6d84;font-size:14px;transition:.22s;align-self:center;flex-shrink:0}
+.ct-card:hover .ct-arrow{color:var(--gold);transform:translateX(3px)}
+
+.socials{display:flex;flex-wrap:wrap;gap:12px}
+.soc{
+  width:52px;height:52px;border-radius:15px;display:grid;place-items:center;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);
+  color:#b9c6d8;font-size:21px;text-decoration:none;transition:.22s;
+}
+.soc:hover{
+  background:linear-gradient(135deg,var(--gold),var(--gold-600));
+  color:#0b1220;border-color:transparent;transform:translateY(-5px) scale(1.04);
+  box-shadow:0 14px 28px -12px rgba(245,165,36,.55);
+}
+
+.form-wrap{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:20px;padding:34px;
+}
+@media (min-width:700px){.form-wrap{padding:44px}}
+.form-grid{display:grid;gap:18px}
+@media (min-width:640px){.form-grid.two{grid-template-columns:1fr 1fr}}
+.field label{
+  display:block;font-size:12px;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;color:#8fa0b7;margin-bottom:9px;
+}
+.field label .req{color:var(--gold);margin-left:3px}
+.field input,.field textarea,.field select{
+  width:100%;padding:13px 16px;border-radius:12px;
+  background:rgba(7,12,22,.65);border:1px solid var(--line);
+  color:var(--text);font-size:14.5px;font-family:inherit;
+  outline:none;transition:.2s;
+}
+.field textarea{min-height:150px;resize:vertical;line-height:1.65}
+.field input:focus,.field textarea:focus,.field select:focus{
+  border-color:rgba(245,165,36,.65);
+  box-shadow:0 0 0 3px rgba(245,165,36,.12);
+}
+.field input::placeholder,.field textarea::placeholder{color:#5d6d84}
+.field select{cursor:pointer;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16' fill='%235d6d84'%3E%3Cpath d='M8 11L2 5h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 16px center;padding-right:44px;
+}
+.field select option{background:var(--ink-800);color:var(--text)}
+.field.error input,.field.error textarea,.field.error select{border-color:rgba(239,68,68,.7)}
+.field .err-msg{display:none;font-size:12.5px;color:#f87171;margin-top:7px}
+.field.error .err-msg{display:block}
+
+.form-foot{
+  display:flex;flex-wrap:wrap;gap:16px;align-items:center;
+  justify-content:space-between;margin-top:26px;
+  padding-top:24px;border-top:1px solid var(--line);
+}
+.form-foot .privacy{font-size:13px;color:#7d8ea6;display:flex;align-items:center;gap:8px}
+.form-foot .privacy i{color:var(--gold)}
+.hp{position:absolute;left:-9999px;opacity:0;pointer-events:none}
+
+.co-list{display:grid;gap:14px;margin-top:30px}
+.co-row{
+  display:flex;align-items:center;gap:18px;
+  padding:22px 24px;border-radius:15px;
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);text-decoration:none;
+  transition:.22s;flex-wrap:wrap;
+}
+.co-row:hover{
+  border-color:rgba(245,165,36,.5);
+  background:linear-gradient(180deg,rgba(245,165,36,.09),var(--ink-900));
+  transform:translateX(4px);
+}
+.co-mark{
+  width:46px;height:46px;border-radius:13px;flex-shrink:0;
+  display:grid;place-items:center;font-family:'Sora';font-weight:800;
+  font-size:15px;letter-spacing:-.03em;
+  background:rgba(245,165,36,.11);border:1px solid rgba(245,165,36,.26);
+  color:var(--gold);transition:.22s;
+}
+.co-row:hover .co-mark{background:linear-gradient(135deg,var(--gold),var(--gold-600));color:#0b1220;border-color:transparent}
+.co-info{flex:1;min-width:180px}
+.co-info h4{font-size:16px;font-weight:700}
+.co-info span{display:block;font-size:13px;color:var(--gold);font-weight:600;margin-top:4px;letter-spacing:.02em}
+.co-go{color:#5d6d84;font-size:15px;flex-shrink:0;transition:.22s}
+.co-row:hover .co-go{color:var(--gold);transform:translate(3px,-3px)}
+
+.faq{display:grid;gap:14px;margin-top:30px}
+.faq-item{
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.22s;
+}
+.faq-item.open{border-color:rgba(245,165,36,.36)}
+.faq-q{
+  width:100%;text-align:left;background:transparent;border:0;
+  padding:20px 24px;cursor:pointer;color:var(--text);
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  font-family:'Sora';font-size:15.5px;font-weight:700;transition:.2s;
+}
+.faq-q:hover{color:var(--gold)}
+.faq-q i{color:var(--gold);font-size:15px;transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q i{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 24px}
+.faq-item.open .faq-a{max-height:400px;padding:0 24px 22px}
+.faq-a p{font-size:14.2px;color:var(--muted);line-height:1.8}
+
+.loc-card{
+  display:grid;grid-template-columns:1fr;gap:0;
+  background:linear-gradient(180deg,var(--ink-800),var(--ink-900));
+  border:1px solid var(--line);border-radius:20px;overflow:hidden;
+}
+@media (min-width:900px){.loc-card{grid-template-columns:1fr 1fr}}
+.loc-map{
+  position:relative;aspect-ratio:4/3;background:var(--ink-700);overflow:hidden;
+  display:grid;place-items:center;
+}
+@media (min-width:900px){.loc-map{aspect-ratio:auto;min-height:340px}}
+.loc-map::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(245,165,36,.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,165,36,.07) 1px,transparent 1px);
+  background-size:34px 34px;
+}
+.loc-pin{position:relative;z-index:2;text-align:center;padding:0 16px}
+.loc-pin i{
+  font-size:52px;color:var(--gold);
+  filter:drop-shadow(0 8px 20px rgba(245,165,36,.5));
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.loc-pin p{font-size:13px;color:#8fa0b7;margin-top:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.loc-body{padding:36px;display:flex;flex-direction:column;justify-content:center}
+.loc-body h3{font-size:22px;font-weight:800}
+.loc-body > p{margin-top:14px;font-size:14.5px;color:#b7c4d6;line-height:1.8}
+.loc-rows{display:grid;gap:14px;margin-top:24px}
+.loc-row{display:flex;align-items:flex-start;gap:13px;font-size:14px;color:var(--muted)}
+.loc-row i{color:var(--gold);font-size:16px;margin-top:3px;flex-shrink:0}
+.loc-row strong{display:block;color:#fff;font-weight:600;font-size:14.5px;margin-bottom:2px}
+
+/* ============================================================
+   FOOTER + MISC
+   ============================================================ */
+.site-foot{background:var(--ink-900);border-top:1px solid var(--line)}
+.foot-grid{display:grid;gap:38px;padding:56px 0 40px;grid-template-columns:1fr}
+@media (min-width:640px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1024px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr 1.2fr}}
+.foot-grid h4{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.foot-list li{margin-bottom:10px;font-size:14px;color:var(--muted)}
+.foot-list a{color:var(--muted);text-decoration:none;transition:.18s}
+.foot-list a:hover{color:var(--gold);padding-left:3px}
+.foot-list i{width:18px;display:inline-block;color:var(--gold);margin-right:6px}
+.foot-bottom{
+  border-top:1px solid var(--line);padding:22px 0;display:flex;flex-wrap:wrap;
+  gap:12px;align-items:center;justify-content:space-between;font-size:13px;color:#7d8ea6;
+}
+
+.back-top{
+  position:fixed;right:22px;bottom:22px;width:48px;height:48px;border-radius:14px;
+  border:1px solid rgba(245,165,36,.4);background:linear-gradient(135deg,var(--gold),var(--gold-600));
+  color:#0b1220;font-size:19px;cursor:pointer;display:grid;place-items:center;padding:0;z-index:70;
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;
+  box-shadow:0 14px 30px -12px rgba(245,165,36,.6);
+}
+.back-top.on{opacity:1;visibility:visible;transform:none}
+.back-top:hover{filter:brightness(1.1)}
+
+.notice{
+  position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);
+  background:var(--ink-800);border:1px solid rgba(245,165,36,.45);
+  color:var(--text);padding:14px 22px;border-radius:13px;
+  font-size:14px;font-weight:500;box-shadow:var(--shadow);
+  z-index:120;opacity:0;visibility:hidden;transition:.3s;
+  max-width:min(92vw,460px);text-align:center;
+  display:flex;align-items:center;gap:10px;
+}
+.notice.show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.notice i{color:var(--gold);font-size:17px;flex-shrink:0}
+.notice.err{border-color:rgba(239,68,68,.6)}
+.notice.err i{color:#f87171}
+
+/* ============================================================
+   RESPONSIVE REFINEMENTS
+   ============================================================ */
+h1,h2,h3,h4,p,li,span,strong{overflow-wrap:break-word;word-wrap:break-word}
+
+/* Tablet landscape → hero single column before 1024px */
+@media (min-width:768px) and (max-width:1023px){
+  .hero-grid{grid-template-columns:1fr;gap:36px;padding:56px 0 62px}
+  .hero .lead,.hero p.body{max-width:640px}
+  .slider-frame{aspect-ratio:16/9}
+}
+
+/* Tablet */
+@media (max-width:1023px){
+  .section{padding:64px 0}
+  .svc-group{padding:58px 0}
+}
+
+/* Mobile landscape / large phone */
+@media (max-width:767px){
+  .wrap{padding:0 16px}
+  .section{padding:54px 0}
+  .section-sm{padding:40px 0}
+  .page-head{padding:38px 0 26px}
+  .page-head h1{font-size:clamp(24px,6.5vw,34px)}
+  .page-head p{font-size:14.5px;margin-top:12px}
+
+  .hero-grid{padding:38px 0 46px;gap:30px}
+  .hero h1{font-size:clamp(26px,6.8vw,36px);margin-top:14px}
+  .hero .lead{font-size:15.5px;margin-top:14px}
+  .hero p.body{font-size:14.5px;margin-top:12px}
+  .hero-cta{margin-top:24px;gap:10px}
+
+  .h2{font-size:clamp(22px,5.2vw,30px);margin-top:14px}
+  .h3{font-size:clamp(19px,4.5vw,25px)}
+  .lead{font-size:15.5px}
+  .eyebrow{font-size:10.5px;padding:5px 12px}
+
+  .stats{gap:10px;margin-top:28px}
+  .stat{padding:12px 10px;border-radius:11px}
+  .stat b{font-size:19px}
+  .stat span{font-size:10.5px}
+
+  .tile{padding:22px;border-radius:14px}
+  .tile-icon{width:44px;height:44px;font-size:19px;border-radius:12px}
+  .tile h3{font-size:17px;margin-top:16px}
+  .tile p{font-size:13.5px}
+
+  .pcard-body{padding:20px}
+  .pcard-body h3{font-size:18px}
+  .pcard-body p{font-size:13.5px}
+  .tag{font-size:10.5px;padding:4px 10px}
+
+  .band{padding:30px 22px;border-radius:16px;gap:20px}
+  .band h2{font-size:clamp(20px,4.8vw,26px)}
+  .band p{font-size:14px;margin-top:8px}
+
+  .svc-group{padding:48px 0}
+  .svc-group-head{gap:14px;margin-bottom:28px}
+  .svc-group-head .gi{width:48px;height:48px;font-size:21px;border-radius:13px}
+  .svc-group-head h2{font-size:clamp(20px,5vw,26px)}
+  .svc-group-head p{font-size:14px;margin-top:5px}
+
+  .svc-nav-bar{top:102px}
+  .svc-nav{padding:10px 0}
+  .svc-nav a{padding:8px 14px;font-size:13px}
+
+  .svc-body{padding:20px}
+  .svc-body h3{font-size:16.5px}
+  .svc-body p{font-size:13.5px;line-height:1.7}
+  .svc-badge{width:36px;height:36px;font-size:15px;top:10px;left:10px}
+
+  .step{padding:22px}
+  .step h4{font-size:15.5px}
+  .step p{font-size:13.5px}
+  .step-num{font-size:12px;padding:3px 10px}
+
+  .featured-body{padding:24px}
+  .featured-body h2{font-size:clamp(19px,4.8vw,26px);margin-top:14px}
+  .featured-body > p{font-size:14px;margin-top:14px}
+
+  .post-body{padding:20px}
+  .post-body h3{font-size:16.5px}
+  .post-body > p{font-size:13.5px;margin-top:10px}
+  .post-meta{font-size:12px;gap:11px}
+
+  .filter-bar{gap:12px;padding-bottom:18px;margin-bottom:26px}
+  .filters{gap:6px}
+  .filters button{padding:8px 13px;font-size:13px;gap:6px}
+  .search-box{min-width:180px;max-width:100%}
+  .search-box input{padding:10px 14px 10px 38px;font-size:14px}
+  .search-box i{left:12px;font-size:14px}
+  .result-line{font-size:13px;margin-bottom:18px}
+
+  .ct-card{padding:20px;gap:14px}
+  .ct-card h4{font-size:15px}
+  .ct-card p{font-size:13px}
+  .ct-icon{width:44px;height:44px;font-size:19px;border-radius:12px}
+
+  .form-wrap{padding:24px;border-radius:16px}
+  .field input,.field textarea,.field select{padding:12px 14px;font-size:16px;border-radius:11px}
+  .field textarea{min-height:130px}
+  .form-foot{margin-top:22px;padding-top:20px;gap:14px}
+  .form-foot .privacy{font-size:12.5px}
+
+  .subscribe{padding:26px;border-radius:16px;gap:20px}
+  .subscribe h3{font-size:clamp(18px,4.5vw,22px)}
+  .sub-form input{padding:12px 14px;font-size:16px;border-radius:11px}
+
+  .author{padding:26px;border-radius:16px;gap:20px}
+  .author-photo{width:90px;height:90px}
+  .author h3{font-size:18px}
+  .author p{font-size:14px;margin-top:9px}
+
+  .loc-body{padding:26px}
+  .loc-body h3{font-size:20px}
+  .loc-body > p{font-size:14px;margin-top:12px}
+  .loc-rows{gap:12px;margin-top:20px}
+  .loc-row{font-size:13.5px;gap:11px}
+  .loc-row strong{font-size:14px}
+  .loc-map{min-height:200px}
+  .loc-pin i{font-size:44px}
+
+  .faq-q{padding:16px 18px;font-size:14.5px;gap:12px}
+  .faq-a{padding:0 18px}
+  .faq-item.open .faq-a{padding:0 18px 18px}
+  .faq-a p{font-size:13.5px;line-height:1.75}
+
+  .co-list{gap:12px;margin-top:24px}
+  .co-row{padding:18px;gap:14px;border-radius:13px}
+  .co-mark{width:42px;height:42px;font-size:14px;border-radius:11px}
+  .co-info h4{font-size:15px}
+  .co-info span{font-size:12.5px;margin-top:3px}
+
+  .timeline{padding-left:26px;margin-top:24px}
+  .timeline::before{left:6px}
+  .tl-item{padding-bottom:24px}
+  .tl-item::before{left:-26px;width:15px;height:15px}
+  .tl-year{font-size:12px;padding:3px 10px}
+  .tl-item h4{font-size:16px;margin-top:9px}
+  .tl-item p{font-size:13.5px;margin-top:4px}
+
+  .chips{gap:7px;margin-top:11px}
+  .chip{padding:7px 12px;font-size:13px;gap:6px;border-radius:10px}
+  .chip i{font-size:14px}
+  .skill-block{margin-top:26px}
+
+  .prose p{font-size:14.5px;margin-top:14px}
+
+  .socials{gap:10px}
+  .soc{width:46px;height:46px;font-size:19px;border-radius:13px}
+
+  .btn-gold,.btn-out{padding:12px 20px;font-size:14px;border-radius:11px}
+
+  .foot-grid{padding:46px 0 32px;gap:30px}
+  .foot-grid h4{margin-bottom:13px}
+  .foot-list li{margin-bottom:9px;font-size:13.5px}
+  .foot-list a{font-size:13.5px}
+  .foot-bottom{padding:20px 0;font-size:12.5px}
+
+  .slider-arrow{width:36px;height:36px;font-size:14px}
+  .slider-arrow.prev{left:10px}
+  .slider-arrow.next{right:10px}
+  .slide-cap{padding:52px 18px 20px}
+  .slide-cap h3{font-size:16px}
+  .slide-cap p{font-size:12.5px}
+  .slider-dots{gap:6px;bottom:11px}
+  .dot{width:7px;height:7px}
+  .dot.on{width:20px}
+
+  .gal-arrow{width:30px;height:30px;font-size:12px}
+  .gal-prev{left:8px}
+  .gal-next{right:8px}
+  .gal-dots{bottom:8px;gap:5px}
+  .gal-dot{width:6px;height:6px}
+  .gal-dot.on{width:15px}
+
+  .back-top{right:16px;bottom:16px;width:44px;height:44px;font-size:17px;border-radius:12px}
+  .notice{font-size:13.5px;padding:12px 18px;max-width:calc(100vw - 28px)}
+
+  [id]{scroll-margin-top:155px}
+}
+
+/* Small phones */
+@media (max-width:480px){
+  .wrap{padding:0 14px}
+  .section{padding:46px 0}
+  .section-sm{padding:34px 0}
+  .page-head{padding:32px 0 22px}
+  .page-head p{font-size:14px;margin-top:11px}
+
+  .hero-grid{padding:30px 0 40px;gap:26px}
+  .hero h1{font-size:clamp(23px,7.2vw,30px);margin-top:12px}
+  .hero .lead{font-size:14.5px;margin-top:12px}
+  .hero p.body{font-size:14px;margin-top:11px}
+  .hero-cta{gap:10px;margin-top:20px}
+  .hero-cta .btn-gold,.hero-cta .btn-out{width:100%;justify-content:center;padding:13px 20px}
+
+  .stats{grid-template-columns:repeat(2,1fr);gap:9px;margin-top:24px}
+  .stat{padding:11px 9px}
+  .stat b{font-size:18px}
+  .stat span{font-size:10px}
+
+  .band{padding:24px 18px;border-radius:14px}
+  .band h2{font-size:clamp(19px,5.2vw,24px)}
+  .band > div:last-child{width:100%}
+  .band .btn-gold,.band .btn-out{width:100%;justify-content:center}
+
+  .svc-group{padding:38px 0}
+  .svc-group-head{gap:12px}
+  .svc-group-head .gi{width:44px;height:44px;font-size:19px;border-radius:12px}
+  .svc-group-head h2{font-size:clamp(19px,5.2vw,23px)}
+
+  .topbar-row{height:34px}
+  .clock{font-size:11.5px;gap:6px}
+  .clock .sep{display:none}
+  .clock i{font-size:12px}
+  .cal-btn{width:30px;height:30px;font-size:13px;border-radius:8px}
+  .cal-panel{width:min(296px,calc(100vw - 20px));right:-6px;padding:12px}
+
+  .navi-row{height:58px;gap:10px}
+  .brand{gap:9px}
+  .brand-mark{width:38px;height:38px;font-size:14px;border-radius:10px}
+  .brand-text strong{font-size:14.5px}
+  .burger{width:40px;height:40px;font-size:18px}
+
+  .eyebrow{font-size:10px;padding:5px 11px;letter-spacing:.12em}
+  .h2{font-size:clamp(20px,5.5vw,26px);margin-top:12px}
+  .h3{font-size:clamp(18px,4.8vw,22px)}
+  .lead{font-size:14.5px}
+
+  .tile{padding:18px;border-radius:13px}
+  .tile-icon{width:40px;height:40px;font-size:17px;border-radius:11px}
+  .tile h3{font-size:16px;margin-top:14px}
+  .tile p{font-size:13px}
+
+  .pcard-body{padding:18px}
+  .pcard-body h3{font-size:17px}
+
+  .svc-body{padding:18px}
+  .svc-body h3{font-size:16px}
+  .svc-body p{font-size:13px}
+
+  .post-body{padding:18px}
+  .post-body h3{font-size:16px}
+
+  .featured-body{padding:20px}
+  .featured-body h2{font-size:clamp(18px,5vw,22px)}
+
+  .filters{gap:5px}
+  .filters button{padding:7px 11px;font-size:12px;gap:5px}
+  .filters button i{font-size:10px}
+  .search-box{min-width:100%;max-width:100%}
+
+  .ct-card{flex-direction:column;text-align:center;align-items:center;gap:11px;padding:18px}
+  .ct-card:hover{transform:none}
+  .ct-arrow{display:none}
+  .ct-card h4{font-size:14.5px}
+
+  .form-wrap{padding:20px}
+  .form-foot{flex-direction:column;align-items:stretch;gap:12px}
+  .form-foot .btn-gold{width:100%;justify-content:center}
+  .form-foot .privacy{justify-content:center;text-align:center}
+
+  .subscribe{padding:20px}
+  .sub-form{flex-direction:column;gap:9px}
+  .sub-form input,.sub-form button{width:100%;justify-content:center}
+
+  .author{padding:22px;text-align:center}
+  .author-photo{width:82px;height:82px;margin:0 auto}
+  .author .eyebrow{margin-bottom:11px}
+  .author div[style*="display:flex"]{justify-content:center}
+
+  .socials{justify-content:center}
+
+  .loc-body{padding:22px}
+  .loc-map{min-height:180px}
+  .loc-pin i{font-size:40px}
+  .loc-pin p{font-size:11.5px}
+
+  .faq-q{font-size:14px;padding:14px 16px;gap:10px}
+  .faq-q i{font-size:13px}
+  .faq-a{padding:0 16px}
+  .faq-item.open .faq-a{padding:0 16px 16px}
+  .faq-a p{font-size:13px}
+
+  .co-row{flex-direction:column;text-align:center;gap:11px;padding:18px 14px}
+  .co-row:hover{transform:none}
+  .co-go{display:none}
+  .co-info h4{font-size:14.5px}
+
+  .timeline{padding-left:22px}
+  .timeline::before{left:5px;width:2px}
+  .tl-item::before{left:-22px;width:14px;height:14px;top:4px}
+  .tl-item{padding-bottom:22px}
+  .tl-item h4{font-size:15px}
+  .tl-item p{font-size:13px}
+
+  .chip{padding:6px 11px;font-size:12.5px;gap:5px}
+  .chip i{font-size:13px}
+  .chips{gap:6px}
+
+  .prose p{font-size:14px}
+
+  .soc{width:42px;height:42px;font-size:17px;border-radius:12px}
+
+  .btn-gold,.btn-out{padding:11px 18px;font-size:13.5px;border-radius:10px}
+
+  .foot-grid{padding:40px 0 28px;gap:26px}
+  .foot-grid h4{font-size:11.5px;margin-bottom:12px}
+  .foot-list li{margin-bottom:8px;font-size:13px}
+  .foot-list a{font-size:13px}
+  .foot-bottom{padding:18px 0;font-size:12px;flex-direction:column;text-align:center;gap:8px}
+
+  .back-top{right:12px;bottom:12px;width:42px;height:42px;font-size:16px;border-radius:11px}
+
+  .slider-frame{aspect-ratio:5/4}
+  .slide-cap{padding:44px 16px 18px}
+  .slide-cap h3{font-size:15px}
+  .slide-cap p{font-size:12px}
+  .slider-arrow{width:32px;height:32px;font-size:13px}
+  .slider-arrow.prev{left:8px}
+  .slider-arrow.next{right:8px}
+
+  .gal-arrow{width:28px;height:28px;font-size:11px}
+  .gal-prev{left:6px}
+  .gal-next{right:6px}
+  .svc-badge{width:32px;height:32px;font-size:14px;top:8px;left:8px}
+
+  .step{padding:18px}
+  .step h4{font-size:15px;margin-top:11px}
+  .step p{font-size:13px;margin-top:7px}
+
+  .notice{font-size:13px;padding:11px 16px}
+
+  [id]{scroll-margin-top:145px}
+}
+
+/* Header shrinks on very small screens → adjust sticky sub-nav */
+@media (max-width:480px){
+  .svc-nav-bar{top:92px}
+}
+
+/* iOS: prevent zoom-on-focus (inputs must be ≥16px) */
+@media (max-width:900px){
+  input,select,textarea{font-size:16px !important}
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+}
+
+.form-success{
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:14px;
+  padding:52px 28px;
+  background:linear-gradient(180deg,rgba(34,197,94,.1),rgba(34,197,94,.02));
+  border:1px solid rgba(34,197,94,.32);
+  border-radius:20px;
+  margin-top:28px;
+  animation:fadeUp .45s ease both;
+}
+.form-success i.bi-check-circle-fill{
+  font-size:60px;
+  color:#22c55e;
+  filter:drop-shadow(0 8px 22px rgba(34,197,94,.45));
+  line-height:1;
+}
+.form-success h3{
+  font-size:23px;
+  font-weight:800;
+  color:#fff;
+  margin:0;
+}
+.form-success p{
+  color:var(--muted);
+  font-size:14.5px;
+  max-width:400px;
+  line-height:1.7;
+  margin:0;
+}
+.form-success .btn-out{
+  margin-top:10px;
+}
+@media (max-width:480px){
+  .form-success{padding:38px 18px;gap:12px}
+  .form-success i.bi-check-circle-fill{font-size:50px}
+  .form-success h3{font-size:20px}
+  .form-success p{font-size:13.5px}
+}
+
+/* ---- Real Google Map inside the location card ---- */
+.loc-map{
+  position:relative;
+  overflow:hidden;
+}
+.loc-map-iframe{
+  width:100%;
+  height:100%;
+  min-height:320px;
+  border:0;
+  display:block;
+  filter:grayscale(.15) contrast(1.02);
+  transition:filter .3s;
+}
+.loc-map-iframe:hover{
+  filter:none;
+}
+@media (max-width:900px){
+  .loc-map-iframe{min-height:260px}
+}
+@media (max-width:480px){
+  .loc-map-iframe{min-height:220px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-head">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-row">
+        <div class="clock">
+          <i class="bi bi-clock-history"></i>
+          <time id="liveTime">--:--:--</time>
+          <span class="sep">|</span>
+          <span class="dtext" id="liveDate">Loading…</span>
+        </div>
+        <div class="cal-wrap" id="calWrap">
+          <button class="cal-btn" id="calBtn" type="button" aria-label="Show calendar" aria-expanded="false">
+            <i class="bi bi-calendar3"></i>
+          </button>
+          <div class="cal-panel" id="calPanel" role="dialog" aria-label="Monthly calendar">
+            <div class="cal-head">
+              <button type="button" id="calPrev" aria-label="Previous month"><i class="bi bi-chevron-left"></i></button>
+              <span id="calTitle">—</span>
+              <button type="button" id="calNext" aria-label="Next month"><i class="bi bi-chevron-right"></i></button>
+            </div>
+            <div class="cal-dow"><span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span></div>
+            <div class="cal-days" id="calDays"></div>
+            <div class="cal-foot"><button type="button" id="calToday">Back to today</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navi">
+    <div class="wrap">
+      <div class="navi-row">
+        <a href="#/home" class="brand">
+          <span class="brand-mark">JU</span>
+          <span class="brand-text">
+            <strong>Jahno Udonde</strong>
+            <small>Engineer · Mathematician · Computer Scientist</small>
+          </span>
+        </a>
+
+        <ul class="menu" id="menu">
+          <li><a href="#/home"     data-route="home">Home</a></li>
+          <li><a href="#/about"    data-route="about">About</a></li>
+          <li><a href="#/services" data-route="services">Services</a></li>
+          <li><a href="#/blog"     data-route="blog">Blog</a></li>
+          <li><a href="#/contact"  data-route="contact">Contact</a></li>
+          <li class="nav-cta"><a href="#/contact" class="btn-gold" style="padding:10px 17px;font-size:13.5px"><i class="bi bi-send"></i> Hire Me</a></li>
+        </ul>
+
+        <button class="burger" id="burger" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- ==================================================================
+     PAGE : HOME
+     ================================================================== -->
+<section class="page is-active" data-page="home">
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <div>
+          <span class="eyebrow"><i class="bi bi-stars"></i> Warm welcome</span>
+          <h1>Hello, I'm <span class="gold">Jahno Udonde</span> — I build technology that works.</h1>
+          <p class="lead">
+            An <strong>Engineer</strong>, <strong>Mathematician</strong> and <strong>Computer Scientist</strong>
+            from Akwa Ibom State, Nigeria. I design software, install and maintain electrical and solar power
+            systems, teach mathematics and technology, and lead companies that deliver real results.
+          </p>
+          <p class="body">
+            Whether you need a full-stack web application, a complete conduit wiring installation, a solar backup
+            system, a repaired smart TV, or a tutor who finally makes Further Mathematics click — you are in the
+            right place. Thank you for stopping by.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#/services" class="btn-gold"><i class="bi bi-grid-1x2"></i> Explore My Services</a>
+            <a href="#/contact" class="btn-out"><i class="bi bi-chat-dots"></i> Get in Touch</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><b>5</b><span>Leadership Roles</span></div>
+            <div class="stat"><b>9</b><span>Programming Languages</span></div>
+            <div class="stat"><b>4</b><span>Service Areas</span></div>
+            <div class="stat"><b>100%</b><span>Commitment</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="slider" id="heroSlider" aria-roledescription="carousel" aria-label="Gallery of my work">
+            <div class="slider-frame">
+
+              <div class="slide is-active">
+                <img src="assets/images/electrical.jpg" data-ph="Engineering &amp; Electrical" alt="Electrical and electronics engineering work">
+                <div class="slide-cap"><h3>Engineering &amp; Electrical Systems</h3><p>Installation, wiring, maintenance and repairs.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/software.jpg" data-ph="Software &amp; Web" alt="Software and web development">
+                <div class="slide-cap"><h3>Software &amp; Web Development</h3><p>Full-stack applications built to last.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/solar.webp" data-ph="Solar &amp; Inverter" alt="Solar and inverter installation">
+                <div class="slide-cap"><h3>Solar &amp; Inverter Installation</h3><p>Reliable, clean power for homes and businesses.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/images.jpg" data-ph="Teaching &amp; Mentorship" alt="Teaching and mentorship">
+                <div class="slide-cap"><h3>Teaching &amp; Mentorship</h3><p>Mathematics, physics, computing and technical drawing.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/cyber.png" data-ph="Cybersecurity" alt="Cybersecurity and ethical hacking">
+                <div class="slide-cap"><h3>Cybersecurity &amp; Ethical Hacking</h3><p>Finding the gaps before attackers do.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/images (38).jpeg" data-ph="AI &amp; Robotics" alt="Artificial intelligence and robotics">
+                <div class="slide-cap"><h3>AI, Automation &amp; Robotics</h3><p>Intelligent systems and control engineering.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/repair.jpg" data-ph="Repairs &amp; Maintenance" alt="Repairs and maintenance of electronics">
+                <div class="slide-cap"><h3>Repairs &amp; Maintenance</h3><p>TVs, laptops, phones and electric motors.</p></div>
+              </div>
+
+              <div class="slide">
+                <img src="assets/images/images (1).jpg" data-ph="Leadership" alt="Leadership and project management">
+                <div class="slide-cap"><h3>Leadership &amp; Project Management</h3><p>Delivering projects on time and on budget.</p></div>
+              </div>
+
+              <button class="slider-arrow prev" type="button" data-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+              <button class="slider-arrow next" type="button" data-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+              <div class="slider-dots" data-dots></div>
+              <div class="slider-bar"><i data-bar></i></div>
+            </div>
+          </div>
+          <p class="small muted" style="text-align:center;margin-top:12px">
+            <i class="bi bi-images gold"></i> A glimpse of my work
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="head-center">
+        <span class="eyebrow"><i class="bi bi-lightning-charge"></i> What I Do</span>
+        <h2 class="h2">Four fields. One standard: excellence.</h2>
+        <p class="lead" style="margin-top:16px">
+          My work spans the digital and the physical — from the code that runs your application
+          to the wiring that powers your building.
+        </p>
+      </div>
+
+      <div class="grid g4" style="margin-top:44px">
+        <article class="tile">
+          <span class="tile-icon"><i class="bi bi-code-slash"></i></span>
+          <h3>Software &amp; Digital</h3>
+          <p>Web design and development, mobile apps, game development, cybersecurity and ethical hacking.</p>
+          <a href="#/services/software" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="tile">
+          <span class="tile-icon"><i class="bi bi-plug"></i></span>
+          <h3>Engineering</h3>
+          <p>Electrical installation, industrial wiring, solar and inverter systems, automation and equipment repairs.</p>
+          <a href="#/services/engineering" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="tile">
+          <span class="tile-icon"><i class="bi bi-mortarboard"></i></span>
+          <h3>Academy</h3>
+          <p>Further Mathematics, Physics, Chemistry, Technical Drawing, Computer Science and Basic Electricity.</p>
+          <a href="#/services/academy" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+        </article>
+
+        <article class="tile">
+          <span class="tile-icon"><i class="bi bi-shop"></i></span>
+          <h3>Sales &amp; Supplies</h3>
+          <p>Building materials, phones, laptops, electrical and electronic equipment, spare parts, tools and components.</p>
+          <a href="#/services/sales" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section-alt">
+    <div class="wrap">
+      <div class="head-center">
+        <span class="eyebrow"><i class="bi bi-compass"></i> Explore</span>
+        <h2 class="h2">Take a tour of the site</h2>
+        <p class="lead" style="margin-top:16px">
+          Each page tells a different part of the story. Click “Read more” for the full details.
+        </p>
+      </div>
+
+      <div class="grid g2" style="margin-top:44px">
+
+        <article class="pcard">
+          <div class="pcard-img">
+            <img src="assets/images/about.jpg" data-ph="About Me" alt="About Jahno Udonde">
+          </div>
+          <div class="pcard-body">
+            <span class="tag"><i class="bi bi-person-badge"></i> About</span>
+            <h3>The person behind the work</h3>
+            <p>My background, my faith, my education from primary school to a Master's in Artificial
+              Intelligence and Robotics, and the skills I bring to every project.</p>
+            <a href="#/about" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pcard-img">
+            <img src="assets/images/services.jpg" data-ph="Services" alt="Services offered">
+          </div>
+          <div class="pcard-body">
+            <span class="tag"><i class="bi bi-tools"></i> Services</span>
+            <h3>Everything I can do for you</h3>
+            <p>Software, engineering, academy and sales — fully grouped and explained in plain language,
+              so you know exactly what you are getting.</p>
+            <a href="#/services" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pcard-img">
+            <img src="assets/images/blog.png" data-ph="Blog" alt="Blog and articles">
+          </div>
+          <div class="pcard-body">
+            <span class="tag"><i class="bi bi-journal-text"></i> Blog</span>
+            <h3>Articles &amp; accomplishments</h3>
+            <p>Practical articles on engineering, software and study, plus a record of projects delivered.
+              Subscribe to get new posts first.</p>
+            <a href="#/blog" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="pcard">
+          <div class="pcard-img">
+            <img src="assets/images/contact.jpg" data-ph="Contact" alt="Contact Jahno Udonde">
+          </div>
+          <div class="pcard-body">
+            <span class="tag"><i class="bi bi-telephone"></i> Contact</span>
+            <h3>Let's build something together</h3>
+            <p>Call, WhatsApp, email or reach me on any social platform. You can also see the companies
+              I work with and the positions I hold.</p>
+            <a href="#/contact" class="read-more">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Have a project, a fault, or a question?</h2>
+          <p>Tell me what you need. I will tell you honestly what it takes, what it costs, and how long it will take.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#/contact" class="btn-gold"><i class="bi bi-send-check"></i> Start a Conversation</a>
+          <a href="#/services" class="btn-out"><i class="bi bi-list-check"></i> See Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================================================================
+     PAGE : ABOUT
+     ================================================================== -->
+<section class="page" data-page="about">
+
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow"><i class="bi bi-person-badge"></i> About Me</span>
+      <h1>The person behind the work</h1>
+      <p>Engineer, mathematician, computer scientist, teacher and company leader — here is where I come from
+        and what I bring to the table.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+
+      <div class="grid g2" style="gap:52px;align-items:start">
+
+        <div class="prose">
+          <h2 class="h3">Who I am</h2>
+          <p>
+            I am <strong>Jahno Udonde</strong>, an Engineer, Mathematician and Computer Scientist. I am a citizen
+            of Nigeria, from <strong>Ikono Local Government Area of Akwa Ibom State</strong>, and I was born and
+            raised in <strong>Calabar, Cross River State</strong>, on Saturday, <strong>22 September 2001</strong>
+            at 1:30 pm.
+          </p>
+          <p>
+            I grew up curious about how things work — taking apart radios before I understood what a resistor
+            was, and writing my first lines of code long before I knew the word “algorithm”. That curiosity
+            turned into a profession that now spans four areas: software, engineering, teaching and business.
+          </p>
+          <p>
+            Today I build full-stack web applications, install and maintain electrical and solar power systems,
+            repair consumer electronics down to component level, teach mathematics and technology to students
+            at secondary, polytechnic and university level, and lead five companies in different capacities.
+          </p>
+
+          <h2 class="h3" style="margin-top:40px">Faith &amp; values</h2>
+          <p>
+            I was raised in a Witness family, and in <strong>2019</strong> I made the truth my own after careful
+            personal research. I came to see that this is the only true organization approved by Jehovah.
+          </p>
+          <p>
+            I dedicated my life to Jehovah and symbolized that dedication in water baptism on Saturday,
+            <strong>21 September 2019</strong>, at the <em>“Love Never Fails”</em> Convention of Jehovah's
+            Witnesses held in <strong>Akampa LGA, Cross River State</strong>.
+          </p>
+          <p>
+            That decision shapes how I work. Honesty in pricing. Care with other people's property. Patience
+            with students who are struggling. And a genuine desire to leave every client, student and colleague
+            better off than I met them.
+          </p>
+        </div>
+
+        <div>
+          <div class="tile" style="padding:0;overflow:hidden">
+            <img src="assets/images/jahno.jpg" data-ph="Jahno Udonde" alt="Jahno Udonde"
+                 style="width:100%;aspect-ratio:4/5;object-fit:cover">
+          </div>
+
+          <div class="tile" style="margin-top:22px">
+            <h4 style="font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)">
+              Quick Facts
+            </h4>
+            <ul style="margin-top:16px;display:grid;gap:11px;font-size:14px">
+              <li><i class="bi bi-geo-alt gold" style="margin-right:9px"></i> Ikono LGA, Akwa Ibom State, Nigeria</li>
+              <li><i class="bi bi-calendar-event gold" style="margin-right:9px"></i> Born 22 September 2001, Calabar</li>
+              <li><i class="bi bi-droplet gold" style="margin-right:9px"></i> Baptized 21 September 2019</li>
+              <li><i class="bi bi-translate gold" style="margin-right:9px"></i> English, Pidgin, Efik</li>
+              <li><i class="bi bi-book gold" style="margin-right:9px"></i> Reading, research, games</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:76px">
+        <span class="eyebrow"><i class="bi bi-mortarboard"></i> Education</span>
+        <h2 class="h2" style="margin-top:18px">From primary school to a Master's programme</h2>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <span class="tl-year">2012</span>
+            <h4>First School Leaving Certificate</h4>
+            <p>Christ the King Nursery and Primary School, No. 3 Abasi-do Street, Calabar South, Cross River State.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2020</span>
+            <h4>Senior Secondary Certificate Examination (SSCE)</h4>
+            <p>Community Technical College, Ikot Efanga Mkpa, Calabar Municipality, Cross River State.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2023</span>
+            <h4>Diploma — Electrical / Electronics Engineering</h4>
+            <p>School of Engineering Technology, Akanu Ibiam Federal Polytechnic, Unwana, Afikpo LGA, Ebonyi State.</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">2027</span>
+            <h4>BSc — Mathematics and Computer Science</h4>
+            <p>Department of Mathematics, Faculty of Science, National Open University of Nigeria (NOUN).</p>
+          </div>
+          <div class="tl-item">
+            <span class="tl-year">Present</span>
+            <h4>Master's — Artificial Intelligence (AI) and Robotics</h4>
+            <p>Department of Mechatronics, Faculty of Engineering.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:76px">
+        <span class="eyebrow"><i class="bi bi-stars"></i> Skills</span>
+        <h2 class="h2" style="margin-top:18px">What I bring to every project</h2>
+
+        <div class="grid g2" style="margin-top:40px;gap:44px">
+
+          <div>
+            <div class="skill-block">
+              <h4>Soft Skills</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-chat-square-text gold"></i> Communication</span>
+                <span class="chip"><i class="bi bi-lightbulb gold"></i> Critical Thinking</span>
+                <span class="chip"><i class="bi bi-puzzle gold"></i> Problem Solving</span>
+                <span class="chip"><i class="bi bi-people gold"></i> Leadership</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Management</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-clock gold"></i> Time Management</span>
+                <span class="chip"><i class="bi bi-people-fill gold"></i> Team Management</span>
+                <span class="chip"><i class="bi bi-kanban gold"></i> Project Management</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Digital Skills</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-window gold"></i> Web Design &amp; Development</span>
+                <span class="chip"><i class="bi bi-stack gold"></i> Full-Stack Development</span>
+                <span class="chip"><i class="bi bi-shield-lock gold"></i> Ethical Hacking</span>
+                <span class="chip"><i class="bi bi-terminal gold"></i> Programming</span>
+                <span class="chip"><i class="bi bi-lock gold"></i> Cybersecurity</span>
+                <span class="chip"><i class="bi bi-cpu gold"></i> AI &amp; Machine Learning</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Programming Languages</h4>
+              <div class="chips">
+                <span class="chip"><i class="devicon-java-plain colored"></i> Java</span>
+                <span class="chip"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                <span class="chip"><i class="devicon-python-plain colored"></i> Python</span>
+                <span class="chip"><i class="devicon-c-plain colored"></i> C</span>
+                <span class="chip"><i class="devicon-csharp-plain colored"></i> C#</span>
+                <span class="chip"><i class="bi bi-braces gold"></i> C+</span>
+                <span class="chip"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                <span class="chip"><i class="devicon-php-plain colored"></i> PHP</span>
+                <span class="chip"><i class="devicon-matlab-plain colored"></i> MATLAB</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="skill-block">
+              <h4>Engineering Skills</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-sliders gold"></i> Control System Engineering</span>
+                <span class="chip"><i class="bi bi-speedometer gold"></i> Instrumentation</span>
+                <span class="chip"><i class="bi bi-cpu gold"></i> Electronics</span>
+                <span class="chip"><i class="bi bi-plug gold"></i> Electrical Design &amp; Installation</span>
+                <span class="chip"><i class="bi bi-tools gold"></i> Electrical &amp; Electronics Maintenance</span>
+                <span class="chip"><i class="bi bi-sun gold"></i> Inverters &amp; Solar Panels</span>
+                <span class="chip"><i class="bi bi-arrow-repeat gold"></i> Rewinding of Electric Motors (AC/DC)</span>
+                <span class="chip"><i class="bi bi-robot gold"></i> Mechatronics &amp; Robotics</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Teaching Skills</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-calculator gold"></i> Further Mathematics</span>
+                <span class="chip"><i class="bi bi-plus-slash-minus gold"></i> General Mathematics</span>
+                <span class="chip"><i class="bi bi-lightning gold"></i> Physics Electronics</span>
+                <span class="chip"><i class="bi bi-droplet-half gold"></i> Chemistry</span>
+                <span class="chip"><i class="bi bi-rulers gold"></i> Technical Drawings</span>
+                <span class="chip"><i class="bi bi-pc-display gold"></i> Computer Science</span>
+                <span class="chip"><i class="bi bi-outlet gold"></i> Basic Electricity</span>
+                <span class="chip"><i class="bi bi-plug gold"></i> Electrical</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Qualities</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-heart gold"></i> Love</span>
+                <span class="chip"><i class="bi bi-hourglass-split gold"></i> Patience</span>
+                <span class="chip"><i class="bi bi-peace gold"></i> Self-Control</span>
+              </div>
+              <p class="small muted" style="margin-top:12px">But love covers all.</p>
+            </div>
+
+            <div class="skill-block">
+              <h4>Languages</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-translate gold"></i> English</span>
+                <span class="chip"><i class="bi bi-translate gold"></i> Nigerian Pidgin</span>
+                <span class="chip"><i class="bi bi-translate gold"></i> West African Pidgin</span>
+                <span class="chip"><i class="bi bi-translate gold"></i> Efik</span>
+              </div>
+            </div>
+
+            <div class="skill-block">
+              <h4>Hobbies</h4>
+              <div class="chips">
+                <span class="chip"><i class="bi bi-book gold"></i> Reading</span>
+                <span class="chip"><i class="bi bi-search gold"></i> Research</span>
+                <span class="chip"><i class="bi bi-moon-stars gold"></i> Rest</span>
+                <span class="chip"><i class="bi bi-controller gold"></i> Games</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Want to work together?</h2>
+          <p>Tell me what you need — software, wiring, solar, repairs, tutoring or supplies — and I will give you
+            an honest answer.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#/contact" class="btn-gold"><i class="bi bi-send-check"></i> Contact Me</a>
+          <a href="#/services" class="btn-out"><i class="bi bi-list-check"></i> See Services</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ==================================================================
+     PAGE : SERVICES
+     ================================================================== -->
+<section class="page" data-page="services">
+
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow"><i class="bi bi-tools"></i> Services</span>
+      <h1>What I can do for you</h1>
+      <p>Every service below is explained in plain language, so you understand exactly what you are paying for
+        before we start. If something you need is not listed, ask — I will tell you honestly whether I can help.</p>
+    </div>
+  </div>
+
+  <div class="svc-nav-bar">
+    <div class="wrap">
+      <nav class="svc-nav" aria-label="Service categories">
+        <a href="#software"><i class="bi bi-code-slash"></i> Software &amp; Digital</a>
+        <a href="#engineering"><i class="bi bi-plug"></i> Engineering</a>
+        <a href="#academy"><i class="bi bi-mortarboard"></i> Academy</a>
+        <a href="#sales"><i class="bi bi-shop"></i> Sales &amp; Supplies</a>
+        <a href="#contracting"><i class="bi bi-clipboard-check"></i> General Contracting</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- SOFTWARE -->
+  <section class="svc-group" id="software">
+    <div class="wrap">
+      <div class="svc-group-head">
+        <span class="gi"><i class="bi bi-code-slash"></i></span>
+        <div>
+          <h2>Software &amp; Digital</h2>
+          <p>Building, securing and maintaining the digital side of your business — from a single page that
+            loads fast to a full application your team relies on every day.</p>
+        </div>
+      </div>
+
+      <div class="grid g3">
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Web Design and Development images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Web Design-Desktop.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Web Design-Mobile.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Web Design-Dashboard.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-window-stack"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Web Design &amp; Development</h3>
+            <p>A website is often the first impression a customer has of your business. I build sites that load
+              quickly, look right on every screen size, and are easy for you to update. Whether you need a simple
+              landing page to advertise a service, a company site with several pages, or a full web application
+              with logins, payments and a database, the process is the same: I listen to what you need, plan it
+              properly, build it, and test it on real phones and computers before handing it over. You also get
+              basic training on how to manage the content yourself.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Mobile App Development images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Mobile App-Screens.avif">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/android-app-development.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Mobile App-iOS.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-phone"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Mobile App Development</h3>
+            <p>Mobile applications for Android and iOS, built around how your users actually behave — not around
+              what is easiest to code. I design the screens, build the logic, connect it to your data, and test it
+              on real devices. This is useful for businesses that need to take orders, track deliveries, manage
+              records, run a loyalty scheme, or simply stay in touch with customers. I can build a cross-platform
+              app that works on both systems, which usually saves time and money compared to building twice.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Game Development images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Game-Concept Art.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Game-Gameplay.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Game-Development.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-controller"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Game Development</h3>
+            <p>Games are not only for entertainment. I build 2D and 3D games that teach, train and advertise —
+              for schools, training centres, businesses and individuals. The work covers concept and mechanics,
+              the visuals, the scoring and levels, and a finished build you can install and play. Whether it is a
+              simple educational game for children or a more complex simulation, the same care goes into making it
+              run smoothly and feel fair to play.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Cybersecurity images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Cybersecurity-Monitoring.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Cybersecurity-Networking.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Cybersecurity-Assessments.webp">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-shield-check"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Cybersecurity</h3>
+            <p>Most people discover their systems are weak only after something has gone wrong. My work is to find
+              those weaknesses first. I assess your website, network or application, identify where it can be
+              attacked, and then help you fix it. This includes checking passwords and access controls, testing
+              whether data can leak, reviewing how your staff use the system, and hardening the servers. You get a
+              clear written report in plain English — what was found, how serious it is, and exactly what to do
+              about it — not a page of jargon you cannot act on.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Ethical Hacking images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Ethical Hacking-Testing.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Ethical Hacking-Lab.webp">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Ethical Hacking-Report.png">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-incognito"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Ethical Hacking &amp; Penetration Testing</h3>
+            <p>An ethical hacker is hired to break into your system — with your written permission — so that a real
+              attacker cannot. I test your website, application or network the way an intruder would, but within an
+              agreed scope and without causing damage. Then I document everything: how the weakness was found, what
+              someone could do with it, and how to close it. This is valuable before launching a new product, after
+              a security scare, or as a routine check for any business that holds customer data.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERING -->
+  <section class="svc-group" id="engineering">
+    <div class="wrap">
+      <div class="svc-group-head">
+        <span class="gi"><i class="bi bi-plug"></i></span>
+        <div>
+          <h2>Engineering &amp; Technical</h2>
+          <p>Power, wiring, repairs and automation — designed properly, installed to standard, tested, and left
+            safe. Every job ends with the same question: would I be comfortable if this were my own house?</p>
+        </div>
+      </div>
+
+      <div class="grid g3">
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Electrical Installation images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Electrical-Conduit Work.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Electrical-Distribution Board.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Electrical-Testing.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-house-gear"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Electrical Installation — Complete &amp; Half Conduit</h3>
+            <p>Wiring for new buildings, renovations and extensions — residential, commercial and industrial. In a
+              complete conduit job, all cables run inside pipes buried in the wall, which protects them and makes
+              future changes easier. In a half conduit job, part of the wiring is surface-mounted and part is
+              concealed, which suits buildings that are already finished. Either way, I size the cables correctly
+              for the load, install proper earthing and protection, label the distribution board clearly, and test
+              everything before handing over. Poorly sized wiring is the cause of most electrical fires, so this
+              is not a job to guess at.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Industrial Wiring images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Industrial-Control Panel.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Industrial-Three Phase.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Industrial-Machine Wiring.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-diagram-3"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Industrial Wiring</h3>
+            <p>Factories, workshops, mills and production facilities need more than domestic wiring. I handle motor
+              control panels, distribution boards, three-phase installations, machine wiring, contactors, overload
+              protection and control circuits. The work is done to standard, with every circuit clearly identified,
+              so that when a fault happens — and eventually one will — your technician can find it quickly instead
+              of tracing cables for hours. I can also design the layout for a new production line from scratch.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Machine Repair and Maintenance images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Machines-Diagnosis.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Machines-Rewinding.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Machines-Service.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-tools"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Repair &amp; Maintenance of Machines &amp; Equipment</h3>
+            <p>Diagnosis, repair and preventive maintenance of electric motors, generators, control panels,
+              inverters, pumps and electronic equipment. I also rewind AC and DC electric motors to their original
+              specification. Beyond fixing what is broken, I offer scheduled servicing — checking insulation,
+              tightening terminals, cleaning cooling paths, and replacing worn parts before they fail. This matters
+              because a machine that is serviced regularly costs far less over its life than one that is repaired
+              only after it stops working.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Solar and Inverter Installation images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Solar-Panel Array.webp">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Solar-Inverter & Batteries.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Solar-Load Audit.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-sun"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Solar &amp; Inverter Installation</h3>
+            <p>Design and installation of solar panels, inverters, charge controllers and battery banks. The most
+              important step happens before anything is bought: I audit your actual load — every light, fridge,
+              freezer, pump, TV and air conditioner — and calculate what size of system you truly need. This is why
+              many installations disappoint: they were sized from a guess. Done correctly, a solar system gives you
+              steady power through outages, reduces your generator fuel cost, and lasts for years with minimal
+              maintenance.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="TV, Laptop and Phone Repairs images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Repair-Smart TV.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Repair-Laptop.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Repairs-Phones.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-tv"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Repairs — Plasma &amp; Smart TVs, Laptops, iPhones, Android Phones</h3>
+            <p>Component-level troubleshooting and repair of plasma TVs, smart TVs, laptops running different
+              operating systems, iPhones and Android phones. I diagnose the fault properly before quoting — no
+              replacing of parts on a guess. Common jobs include power supply faults, no-display issues, broken
+              charging ports, water damage, software problems, failed hard drives and screen replacements. If a
+              device is genuinely not worth repairing, I will say so honestly and explain why, rather than take
+              your money for something that will fail again next month.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="MPE Design images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/MEP-Drawings.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/MEP-Plumbing Layout.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/MEP-Electrical Layout.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-rulers"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Mechanical, Electrical &amp; Plumbing (MEP) Design</h3>
+            <p>Coordinated design of the mechanical, electrical and plumbing services in a building — so the air
+              conditioning, water supply, drainage, power and lighting all fit together from the drawing stage,
+              instead of being forced to fit on site. Good MEP design prevents the situation where a pipe runs
+              exactly where a cable tray needs to go, or a beam sits where a duct should pass. It saves money
+              during construction and prevents expensive corrections later. I produce the drawings and the
+              specifications your contractor will work from.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Automation images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Automation-PLC Panel.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Automation-Sensors.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Automation-Process Control.png">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-robot"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Automation</h3>
+            <p>PLC and microcontroller-based automation for workshops, water systems, security, production lines
+              and buildings. This includes sensors, motor control, level and flow monitoring, automatic switching,
+              alarm systems and process control. Automation reduces the need for someone to stand and watch a
+              machine or manually start a pump — the system does it, reliably, and tells you when something is
+              wrong. It also improves consistency, because a controller does not get tired or distracted.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY -->
+  <section class="svc-group" id="academy">
+    <div class="wrap">
+      <div class="svc-group-head">
+        <span class="gi"><i class="bi bi-mortarboard"></i></span>
+        <div>
+          <h2>Academy &amp; Tutoring</h2>
+          <p>One-on-one and small-group teaching that builds real understanding, not memorisation. My goal is
+            that a student can solve a problem they have never seen before — which is exactly what examinations
+            and working life require.</p>
+        </div>
+      </div>
+
+      <div class="grid g2">
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/Further & General Mathematics.jpg"
+                 alt="Further and general mathematics tutoring">
+            <span class="svc-badge"><i class="bi bi-calculator"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Further Mathematics &amp; General Mathematics</h3>
+            <p>From basic algebra through to calculus, vectors, mechanics, statistics and complex numbers. I teach
+              the reasoning behind each method, not just the steps — so a student understands why the formula
+              works and can recognise when to use it. This matters because examination questions rarely look
+              exactly like the examples in the textbook. For students preparing for WAEC, NECO, NABTE, GCE, JAMB, polytechnic
+              or university examinations, I start by finding the gap. Most students who "hate maths" are not
+              weak — they missed something two or three years ago that nobody went back to fill. Once that is
+              fixed, progress is usually fast.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/Physics Electronic & Chemistry.jpg"
+                 alt="Physics, electronics and chemistry tutoring">
+            <span class="svc-badge"><i class="bi bi-lightning"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Physics Electronics &amp; Chemistry</h3>
+            <p>Clear explanations, worked examples and plenty of practice. In physics I cover mechanics,
+              electricity, electronics, waves and modern physics. In chemistry, physical, organic and inorganic
+              topics, with attention to the calculations that trip students up. I use real examples wherever
+              possible — the physics of a solar panel or the chemistry of a battery means more to a student than
+              an abstract diagram, and it is remembered longer.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/Technical Drawing.jpg"
+                 alt="Technical drawing tutoring">
+            <span class="svc-badge"><i class="bi bi-rulers"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Technical Drawings</h3>
+            <p>Orthographic projection, isometric drawing, sectional views, dimensioning, tolerances and
+              engineering conventions — taught the way technicians and engineers actually use them on site, not
+              only the way they appear in an examination. A student who can read a drawing correctly will work
+              faster and make fewer mistakes than one who cannot, and this is a skill that carries directly into
+              engineering practice.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/Computer Science & Basic Electricity.jpg"
+                 alt="Computer science and basic electricity tutoring">
+            <span class="svc-badge"><i class="bi bi-pc-display"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Computer Science &amp; Basic Electricity</h3>
+            <p>Programming fundamentals, computer architecture, logic, algorithms and basic electrical theory —
+              voltage, current, resistance, power, series and parallel circuits, and the use of test instruments.
+              Ideal for beginners starting a computing course, technicians upgrading their skills, and students
+              preparing for technical examinations. I combine both subjects because in modern work they overlap:
+              almost every electrical job now involves some electronics, and most automation involves both.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SALES -->
+  <section class="svc-group" id="sales">
+    <div class="wrap">
+      <div class="svc-group-head">
+        <span class="gi"><i class="bi bi-shop"></i></span>
+        <div>
+          <h2>Sales &amp; Supplies</h2>
+          <p>Genuine products, fair prices, and advice you can trust. I would rather tell you that a cheaper
+            option is fine than sell you something you do not need.</p>
+        </div>
+      </div>
+
+      <div class="grid g3">
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Building Materials images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Building-Materials.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Building-Delivery.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Building-On Site.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-bricks"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Building Materials</h3>
+            <p>Supply of quality building materials for construction and renovation projects — sourced from
+              trusted suppliers and delivered where you need them. Because I also work on site as a contractor, I
+              know which materials hold up in practice and which ones cause problems six months later. That means
+              the advice that comes with the supply is based on real installation experience, not just a price
+              list.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Electronics and Gadgets images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/Gadgets-Phones.jpg">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Gadgets-Laptops.avif">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Gadgets-Setup.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-phone"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Electronics &amp; Gadgets</h3>
+            <p>iPhones, Android phones and laptops running different operating systems — genuine devices at fair
+              prices, with honest advice on what suits your budget and needs. Not everyone needs the most
+              expensive phone, and not everyone should buy the cheapest laptop. I will ask what you actually do
+              with it and recommend accordingly. Devices can also be set up and configured before delivery, so you
+              are ready to use it immediately.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media" data-gallery aria-roledescription="image gallery" aria-label="Electrical and Electronic Components images">
+            <div class="gal-slide is-active">
+              <img src="assets/images/electrical-and-electronic-spare-parts.webp">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Tools.webp">
+            </div>
+            <div class="gal-slide">
+              <img src="assets/images/Component.jpg">
+            </div>
+            <button class="gal-arrow gal-prev" type="button" data-gal-prev aria-label="Previous image"><i class="bi bi-chevron-left"></i></button>
+            <button class="gal-arrow gal-next" type="button" data-gal-next aria-label="Next image"><i class="bi bi-chevron-right"></i></button>
+            <div class="gal-dots" data-gal-dots></div>
+            <span class="svc-badge"><i class="bi bi-cpu"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Electrical &amp; Electronic Equipment, Spare Parts, Tools &amp; Components</h3>
+            <p>Components, tools and spare parts for electrical and electronic work — cables, breakers, contactors,
+              relays, sensors, resistors, capacitors, transistors, connectors, test instruments, soldering
+              equipment and more. If you are a technician mid-job and need the right part, I can help you find it
+              the first time, so your work does not stall while you search the market. Bulk supply for contractors
+              and workshops is also available.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRACTING -->
+  <section class="svc-group" id="contracting">
+    <div class="wrap">
+      <div class="svc-group-head">
+        <span class="gi"><i class="bi bi-clipboard-check"></i></span>
+        <div>
+          <h2>General Contracting</h2>
+          <p>One accountable person for the whole job. You deal with me, get one clear quotation, and know
+            exactly who to call if anything needs attention afterwards.</p>
+        </div>
+      </div>
+
+      <div class="grid g2">
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/End-to-End Project Delivery.jpg"
+                 alt="End-to-end project delivery">
+            <span class="svc-badge"><i class="bi bi-clipboard-check"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>End-to-End Project Delivery</h3>
+            <p>I take responsibility for the whole project — planning, sourcing, execution, supervision and
+              handover. You do not have to coordinate five different tradesmen or chase three suppliers. You get
+              one quotation that covers the work, one point of contact throughout, a clear timeline, and a single
+              person who remains accountable after completion. For renovation, installation, fit-out or
+              construction work, this is often the difference between a project that finishes and one that drags
+              on for months.</p>
+          </div>
+        </article>
+
+        <article class="svc-card">
+          <div class="svc-media">
+            <img src="assets/images/Sub-Contracting & Team Management.png"
+                 alt="Sub-contracting and team management">
+            <span class="svc-badge"><i class="bi bi-people"></i></span>
+          </div>
+          <div class="svc-body">
+            <h3>Sub-Contracting &amp; Team Management</h3>
+            <p>For larger jobs, I assemble and manage a vetted team of electricians, technicians, plumbers and
+              tradesmen. I supervise the work personally, check it against the specification at each stage, and
+              remain accountable for the final result. If you are a main contractor looking for a reliable
+              sub-contractor for the electrical, electronic or MEP portions of a project, this is where I can
+              help — with proper documentation and clear communication throughout.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW I WORK -->
+  <section class="section section-alt">
+    <div class="wrap">
+      <div style="text-align:center;max-width:660px;margin:0 auto">
+        <span class="eyebrow"><i class="bi bi-diagram-2"></i> How I Work</span>
+        <h2 class="h2">Four steps, every time</h2>
+        <p class="lead" style="margin-top:16px">
+          Whether it is a website or a wiring installation, the process is the same — because it is what
+          prevents surprises.
+        </p>
+      </div>
+
+      <div class="grid g2" style="margin-top:44px;gap:22px">
+        <div class="grid g2" style="gap:22px">
+          <div class="step">
+            <span class="step-num">Step 1</span>
+            <h4>Listen &amp; Assess</h4>
+            <p>You explain what you need. I ask questions, look at the site or the system, and identify what is
+              actually required — which is sometimes different from the first idea.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">Step 2</span>
+            <h4>Plan &amp; Quote</h4>
+            <p>You receive a clear quotation: what will be done, what materials will be used, how long it will
+              take, and what it will cost. No hidden additions later.</p>
+          </div>
+        </div>
+        <div class="grid g2" style="gap:22px">
+          <div class="step">
+            <span class="step-num">Step 3</span>
+            <h4>Execute &amp; Test</h4>
+            <p>The work is carried out to standard, with you kept informed of progress. At the end, everything is
+              tested and demonstrated — not just handed over and left.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">Step 4</span>
+            <h4>Support</h4>
+            <p>If something needs attention afterwards, you know exactly who to call. I stand behind my work and
+              answer questions long after the job is finished.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Ready to start?</h2>
+          <p>Tell me what you need — software, wiring, solar, repairs, tutoring, supplies or a full project — and
+            I will give you an honest assessment, including whether I am the right person for the job.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#/contact" class="btn-gold"><i class="bi bi-send-check"></i> Request a Quote</a>
+          <a href="#/about" class="btn-out"><i class="bi bi-person-badge"></i> About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ==================================================================
+     PAGE : BLOG
+     ================================================================== -->
+<section class="page" data-page="blog">
+
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow"><i class="bi bi-journal-text"></i> Blog</span>
+      <h1>Articles, notes &amp; accomplishments</h1>
+      <p>Practical writing about engineering, software, teaching and the projects I have delivered. Written for
+        people who want to understand the work — not for people who want to be impressed by it.</p>
+    </div>
+  </div>
+
+  <section class="section-sm">
+    <div class="wrap">
+      <article class="featured">
+        <div class="featured-media">
+          <span class="featured-flag"><i class="bi bi-star-fill"></i> Featured</span>
+          <img src="assets/images/How-To-Size-A-Solar-PV-System-A-Step-by-Step-Guide.jpg"
+               alt="Solar panel array being installed on a roof">
+        </div>
+        <div class="featured-body">
+          <div class="post-meta">
+            <span class="cat-pill"><i class="bi bi-plug"></i> Engineering</span>
+            <span><i class="bi bi-calendar3"></i> 12 January 2025</span>
+            <span><i class="bi bi-clock"></i> 7 min read</span>
+          </div>
+          <h2><a href="https://gennextechnologies.com/how-to-size-a-solar-pv-system-a-step-by-step-guide/">Sizing a Solar System for a Nigerian Home: What Actually Matters</a></h2>
+          <p>Most solar installations disappoint because they were sized from a guess — usually whatever the
+            installer had in stock. This article walks through the load-audit method I use before quoting a
+            single panel: how to measure real consumption, why the fridge and freezer dominate the calculation,
+            how to allow for cloudy-season performance, and why a smaller system that is sized correctly will
+            always beat a bigger one that is sized optimistically.</p>
+          <a href="https://gennextechnologies.com/how-to-size-a-solar-pv-system-a-step-by-step-guide/" class="read-more">Read the full article <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+
+      <div class="filter-bar">
+        <div class="filters" id="filters" role="group" aria-label="Filter articles by category">
+          <button type="button" class="on" data-filter="all"><i class="bi bi-grid"></i> All</button>
+          <button type="button" data-filter="engineering"><i class="bi bi-plug"></i> Engineering</button>
+          <button type="button" data-filter="software"><i class="bi bi-code-slash"></i> Software</button>
+          <button type="button" data-filter="security"><i class="bi bi-shield-check"></i> Security</button>
+          <button type="button" data-filter="repairs"><i class="bi bi-tools"></i> Repairs</button>
+          <button type="button" data-filter="academy"><i class="bi bi-mortarboard"></i> Academy</button>
+          <button type="button" data-filter="business"><i class="bi bi-briefcase"></i> Business</button>
+        </div>
+
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" id="blogSearch" placeholder="Search articles…" aria-label="Search articles">
+        </div>
+      </div>
+
+      <div class="result-line">
+        <span>Showing <b id="resultCount">9</b> of 9 articles</span>
+        <span class="small"><i class="bi bi-info-circle"></i> Click a category or type to filter</span>
+      </div>
+
+      <div class="grid g3" id="postGrid">
+
+        <article class="post-card" data-cat="software" data-search="electrician programming plc automation ladder logic career skills">
+          <div class="post-media">
+            <span class="post-cat">Software</span>
+            <img src="assets/images/guidance-books-landing-page.webp"
+                 alt="Electrician learning programming on a laptop">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 28 Feb 2025</span>
+              <span><i class="bi bi-clock"></i> 6 min</span>
+            </div>
+            <h3><a href="https://electrical.theiet.org/guidance-and-codes-of-practice/">Why Every Electrician Should Learn Basic Programming</a></h3>
+            <p>Automation is arriving on Nigerian sites whether we are ready or not. The technicians who can
+              read a PLC ladder diagram and write a few lines of logic will be the ones still employed in ten
+              years — and the ones who can charge more for the same job today.</p>
+            <a href="https://electrical.theiet.org/guidance-and-codes-of-practice/" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="academy" data-search="further mathematics teaching students hate maths waec neco jamb tutoring gaps">
+          <div class="post-media">
+            <span class="post-cat">Academy</span>
+            <img src="assets/images/post-2.jpg" data-ph="Teaching Further Maths"
+                 alt="Teaching Further Mathematics to a student">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 19 Mar 2025</span>
+              <span><i class="bi bi-clock"></i> 5 min</span>
+            </div>
+            <h3><a href="#">Teaching Further Mathematics to Students Who “Hate Maths”</a></h3>
+            <p>The problem is almost never ability. It is usually a gap from two or three years ago that nobody
+              went back to fill. Here is how I find that gap in the first session, and why fixing it changes
+              everything that follows.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="security" data-search="ethical hacking penetration testing authorisation scope report cybersecurity">
+          <div class="post-media">
+            <span class="post-cat">Security</span>
+            <img src="assets/images/post-3.jpg" data-ph="Ethical Hacking"
+                 alt="Ethical hacking and penetration testing workstation">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 07 Apr 2025</span>
+              <span><i class="bi bi-clock"></i> 8 min</span>
+            </div>
+            <h3><a href="#">Ethical Hacking Is Not Cracking: A Practical Introduction</a></h3>
+            <p>What written authorisation actually means, why a scope document protects both sides, how a
+              penetration test differs from an attack, and what a proper findings report should contain. If you
+              are hiring a tester, read this first.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="repairs" data-search="inverter faults repair maintenance battery charger mosfet installation mistakes">
+          <div class="post-media">
+            <span class="post-cat">Repairs</span>
+            <img src="assets/images/post-4.jpg" data-ph="Inverter Repair"
+                 alt="Inverter being repaired on a workbench">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 22 May 2025</span>
+              <span><i class="bi bi-clock"></i> 6 min</span>
+            </div>
+            <h3><a href="#">Five Inverter Faults I See Every Week — and What Causes Them</a></h3>
+            <p>Most inverter failures are not random. They trace back to five avoidable causes, and four of
+              them start at the installation stage — long before the unit ever fails. Here is what to check on
+              your own system this weekend.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="engineering" data-search="three phase wiring industrial installation mistakes earthing cable sizing">
+          <div class="post-media">
+            <span class="post-cat">Engineering</span>
+            <img src="assets/images/post-5.jpg" data-ph="Three-Phase Wiring"
+                 alt="Three-phase industrial wiring and control panel">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 04 Jul 2025</span>
+              <span><i class="bi bi-clock"></i> 7 min</span>
+            </div>
+            <h3><a href="#">Three-Phase Wiring: The Mistakes I Find on Almost Every Site</a></h3>
+            <p>Undersized neutral conductors. Missing earth leakage protection. Circuits labelled in marker on
+              the panel door. These are the faults I find again and again — and each one has a specific,
+              avoidable cause.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="business" data-search="choosing laptop nigeria budget ram ssd processor buy advice">
+          <div class="post-media">
+            <span class="post-cat">Business</span>
+            <img src="assets/images/post-6.jpg" data-ph="Choosing a Laptop"
+                 alt="Laptops available for different budgets and needs">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 21 Aug 2025</span>
+              <span><i class="bi bi-clock"></i> 5 min</span>
+            </div>
+            <h3><a href="#">Choosing a Laptop in Nigeria: What Actually Matters</a></h3>
+            <p>Brand name matters far less than three specifications most buyers ignore. Here is how to spend
+              your budget properly — whether you are buying for a student, a designer, or yourself — and which
+              upgrades are worth paying for.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="security" data-search="small business cyber theft checklist passwords backup phishing staff training">
+          <div class="post-media"> 
+            <span class="post-cat">Security</span>
+            <img src="assets/images/post-7.jpg" data-ph="Business Security"
+                 alt="Small business cybersecurity checklist">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 15 Sep 2025</span>
+              <span><i class="bi bi-clock"></i> 6 min</span>
+            </div>
+            <h3><a href="#">Protecting a Small Business from Cyber Theft: A Starter Checklist</a></h3>
+            <p>You do not need an enterprise security budget to stop the attacks that actually target small
+              businesses. Six practical steps — most of them free — that close the doors most commonly walked
+              through.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="repairs" data-search="rewinding electric motor ac dc cost worth repair replace decision">
+          <div class="post-media">
+            <span class="post-cat">Repairs</span>
+            <img src="assets/images/post-8.jpg" data-ph="Motor Rewinding"
+                 alt="Rewinding an electric motor in a workshop">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 02 Oct 2025</span>
+              <span><i class="bi bi-clock"></i> 6 min</span>
+            </div>
+            <h3><a href="#">Rewinding an Electric Motor: When It's Worth It and When It Isn't</a></h3>
+            <p>A rewind is often far cheaper than a replacement — but not always. Here is how I decide, what
+              affects the cost, and the warning signs that a motor is about to fail again regardless of how well
+              the rewind is done.</p>
+            <a href="#" class="read-more">Read article <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <article class="post-card" data-cat="business" data-search="portfolio recent projects accomplishments software installation repairs review">
+          <div class="post-media">
+            <span class="post-cat">Portfolio</span>
+            <img src="assets/images/post-9.jpg" data-ph="Recent Projects"
+                 alt="Completed projects in software and engineering">
+          </div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span><i class="bi bi-calendar3"></i> 10 Jun 2025</span>
+              <span><i class="bi bi-clock"></i> 9 min</span>
+            </div>
+            <h3><a href="#">Recent Projects: What I Built and What I Learned</a></h3>
+            <p>A running record of completed work — applications, installations, repairs and designs — with
+              honest notes on what went well, what I would do differently, and what each project taught me about
+              the next one.</p>
+            <a href="#" class="read-more">View portfolio <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="empty" id="emptyState">
+        <i class="bi bi-search"></i>
+        <h3>No articles match that search</h3>
+        <p>Try a different word, or clear the filter to see everything again.</p>
+        <button type="button" class="btn-out" id="clearFilters" style="margin-top:20px">
+          <i class="bi bi-arrow-counterclockwise"></i> Clear filters
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="author">
+        <div class="author-photo">
+          <img src="assets/images/jahno.jpg" data-ph="Jahno Udonde" alt="Jahno Udonde">
+        </div>
+        <div>
+          <span class="eyebrow" style="margin-bottom:14px"><i class="bi bi-pencil-square"></i> Written by</span>
+          <h3>Jahno Udonde</h3>
+          <p>Engineer, Mathematician and Computer Scientist from Akwa Ibom State, Nigeria. I write about the
+            things I actually do — installing solar systems, wiring buildings, building software, repairing
+            equipment, teaching mathematics, and running technology companies. Every article here comes out of
+            real work, not theory.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
+            <a href="#/about" class="btn-out" style="padding:11px 20px;font-size:14px">
+              <i class="bi bi-person-badge"></i> More about me
+            </a>
+            <a href="#/contact" class="btn-gold" style="padding:11px 20px;font-size:14px">
+              <i class="bi bi-envelope"></i> Get in touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="subscribe">
+        <div>
+          <span class="eyebrow"><i class="bi bi-envelope-paper"></i> Newsletter</span>
+          <h3 class="h3" style="margin-top:16px">Get new articles first</h3>
+          <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.8">
+            One email when something genuinely useful is published — a fault I have diagnosed, a method I have
+            tested, a project I have finished. No spam, no daily noise, and you can unsubscribe at any time.
+          </p>
+          <p class="sub-note"><i class="bi bi-shield-check gold"></i> Your email stays private. It is never sold or shared.</p>
+        </div>
+        <form class="sub-form" data-form>
+          <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
+          <button type="submit" class="btn-gold"><i class="bi bi-send"></i> Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Want to see the full portfolio?</h2>
+          <p>Browse completed projects — applications, installations, repairs and designs — with descriptions,
+            photographs and notes on what each one involved.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#" class="btn-gold"><i class="bi bi-collection"></i> Open Portfolio</a>
+          <a href="#/services" class="btn-out"><i class="bi bi-list-check"></i> See Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+<!-- ==================================================================
+     PAGE : CONTACT
+     ================================================================== -->
+<section class="page" data-page="contact">
+
+  <div class="page-head">
+    <div class="wrap">
+      <span class="eyebrow"><i class="bi bi-telephone"></i> Contact</span>
+      <h1>Let's build something together</h1>
+      <p>Call, message or email — whichever is easiest for you. Every genuine enquiry gets a reply, and if I am
+        not the right person for the job, I will tell you honestly and point you to someone who is.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="grid g3">
+
+        <a href="tel:+2349064710964" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-telephone-fill"></i></span>
+          <div>
+            <h4>Phone Call</h4>
+            <p>+234 906 471 0964</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="https://wa.me/2349064710964" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-whatsapp"></i></span>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>Chat with me directly</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="mailto:elighttechnology.co@gmail.com" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-envelope-fill"></i></span>
+          <div>
+            <h4>Email</h4>
+            <p>elighttechnology.co@gmail.com</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-facebook"></i></span>
+          <div>
+            <h4>Facebook</h4>
+            <p>Follow my work and updates</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-twitter-x"></i></span>
+          <div>
+            <h4>X (Twitter)</h4>
+            <p>Short thoughts and updates</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-instagram"></i></span>
+          <div>
+            <h4>Instagram</h4>
+            <p>Photos from projects and site</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-telegram"></i></span>
+          <div>
+            <h4>Telegram</h4>
+            <p>Quick messages and files</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-linkedin"></i></span>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>Professional profile</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="ct-card">
+          <span class="ct-icon"><i class="bi bi-github"></i></span>
+          <div>
+            <h4>GitHub</h4>
+            <p>Code and open projects</p>
+          </div>
+          <i class="bi bi-arrow-right ct-arrow"></i>
+        </a>
+
+      </div>
+
+      <div style="margin-top:48px">
+        <h3 class="h3" style="font-size:20px">Find me on social media</h3>
+        <p class="muted" style="margin-top:10px;font-size:14.5px">
+          <!-- Replace each <code style="color:var(--gold);background:rgba(245,165,36,.08);padding:2px 7px;border-radius:5px;font-size:13px">href="#"</code>
+          with your real profile URL. -->
+        </p>
+        <div class="socials" style="margin-top:22px">
+          <a href="#" class="soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="soc" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://wa.me/2349064710964" class="soc" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" class="soc" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="#" class="soc" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="soc" aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <a href="#" class="soc" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="soc" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+          <a href="#" class="soc" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+
+      <div class="grid g2" style="gap:44px;align-items:start">
+
+        <div id="contactForm">
+          <span class="eyebrow"><i class="bi bi-chat-dots"></i> Send a Message</span>
+          <h2 class="h2" style="font-size:clamp(24px,3vw,32px)">Tell me what you need</h2>
+          <p class="muted" style="margin-top:14px;font-size:15px;line-height:1.75">
+            Describe the project, the fault, or the question. The more detail you give, the more useful my first
+            reply will be. I normally respond within one working day.
+          </p>
+
+          <form class="form-wrap" id="mainContactForm" style="margin-top:28px"
+      action="https://formspree.io/f/xkjrwwdk" method="POST" novalidate>
+  <input type="hidden" name="_subject" value="New enquiry from your website">
+            <div class="form-grid two">
+
+              <div class="field" data-field>
+                <label for="fName">Full Name <span class="req">*</span></label>
+                <input id="fName" name="name" type="text" placeholder="Your full name" required>
+                <span class="err-msg">Please enter your name.</span>
+              </div>
+
+              <div class="field" data-field>
+                <label for="fEmail">Email Address <span class="req">*</span></label>
+                <input id="fEmail" name="email" type="email" placeholder="you@example.com" required>
+                <span class="err-msg">Please enter a valid email address.</span>
+              </div>
+
+            </div>
+
+            <div class="form-grid two" style="margin-top:18px">
+
+              <div class="field" data-field>
+                <label for="fPhone">Phone / WhatsApp</label>
+                <input id="fPhone" name="phone" type="tel" placeholder="+234 000 000 0000" required>
+                <span class="err-msg">Please enter a valid phone number.</span>
+              </div>
+
+              <div class="field" data-field>
+                <label for="fService">What do you need? <span class="req">*</span></label>
+                <select id="fService" name="service" required>
+                  <option value="">— Please choose —</option>
+                  <option>Software / Web Development</option>
+                  <option>Mobile App Development</option>
+                  <option>Game Development</option>
+                  <option>Cybersecurity / Ethical Hacking</option>
+                  <option>Electrical Installation</option>
+                  <option>Industrial Wiring</option>
+                  <option>Solar &amp; Inverter Installation</option>
+                  <option>Repairs &amp; Maintenance</option>
+                  <option>MPE Design</option>
+                  <option>Automation</option>
+                  <option>Academy / Tutoring</option>
+                  <option>Sales &amp; Supplies</option>
+                  <option>General Contracting</option>
+                  <option>Something else</option>
+                </select>
+                <span class="err-msg">Please choose a service.</span>
+              </div>
+
+            </div>
+
+            <div class="field" data-field style="margin-top:18px">
+              <label for="fSubject">Subject <span class="req">*</span></label>
+              <input id="fSubject" name="subject" type="text" placeholder="A short title for your message" required>
+              <span class="err-msg">Please enter a subject.</span>
+            </div>
+
+            <div class="field" data-field style="margin-top:18px">
+              <label for="fMessage">Message <span class="req">*</span></label>
+              <textarea id="fMessage" name="message" placeholder="Describe what you need — the site, the fault, the timeline, the budget if you have one…" required></textarea>
+              <span class="err-msg">Please write a message (at least 20 characters).</span>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="fWebsite">Website</label>
+              <input id="fWebsite" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="form-foot">
+              <p class="privacy"><i class="bi bi-shield-check"></i> Your details stay private and are never shared.</p>
+              <button type="submit" class="btn-gold" id="submitBtn">
+                <i class="bi bi-send"></i> Send Message
+              </button>
+            </div>
+          </form>
+
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+          <i class="bi bi-check-circle-fill"></i>
+          <h3>Message sent successfully</h3>
+          <p>Thank you — your message has been received. I will reply within one working day.</p>
+          <button type="button" class="btn-out" id="sendAnother">
+            <i class="bi bi-arrow-repeat"></i> Send another message
+          </button>
+        </div>
+        </div>
+
+        <div>
+
+          <div class="loc-card">
+          <div class="loc-map">
+  <iframe
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.546150053335!2d3.5357574177377353!3d6.614209174649752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bef007ac95693%3A0x8c5afad04492d747!2sERUNWEN%20IKORODU%20LAGOS!5e0!3m2!1sen!2sng!4v1794338904215!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+      title="Jahno Udonde — Ikorodu LGA, Lagos State">
+  </iframe>
+</div>
+            <div class="loc-body">
+              <h3>Where I work</h3>
+              <p>Based in Ikorodu Local Government Area, Lagos State, Nigeria — and available for projects
+                across the country. For on-site work, travel is arranged as part of the quotation.</p>
+
+              <div class="loc-rows">
+                <div class="loc-row">
+                  <i class="bi bi-geo-alt"></i>
+                  <div><strong>Home Base</strong>Ikorodu LGA, Lagos State, Nigeria</div>
+                </div>
+                <div class="loc-row">
+                  <i class="bi bi-clock"></i>
+                  <div><strong>Response Time</strong>Usually within one working day</div>
+                </div>
+                <div class="loc-row">
+                  <i class="bi bi-calendar-week"></i>
+                  <div><strong>Working Days</strong>Monday to Saturday, appointments preferred</div>
+                </div>
+                <div class="loc-row">
+                  <i class="bi bi-globe"></i>
+                  <div><strong>Coverage</strong>All of Nigeria, remote work worldwide</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tile" style="margin-top:22px">
+            <span class="eyebrow" style="margin-bottom:14px"><i class="bi bi-lightning-charge"></i> Need a fast answer?</span>
+            <h3 style="font-size:19px;font-weight:800;margin-top:14px">WhatsApp is quickest</h3>
+            <p style="margin-top:12px;font-size:14.3px;color:var(--muted);line-height:1.75">
+              For urgent faults — a tripped breaker, a dead inverter, a system that stopped working — WhatsApp
+              usually gets the fastest reply. Send a short description and a photo if you can.
+            </p>
+            <a href="https://wa.me/2349064710964" target="_blank" rel="noopener" class="btn-gold" style="margin-top:20px;width:100%">
+              <i class="bi bi-whatsapp"></i> Open WhatsApp
+            </a>
+          </div>
+
+          <div class="tile" style="margin-top:22px">
+            <span class="eyebrow" style="margin-bottom:14px"><i class="bi bi-list-check"></i> Helpful to include</span>
+            <h3 style="font-size:19px;font-weight:800;margin-top:14px">Make your first message count</h3>
+            <ul style="margin-top:16px;display:grid;gap:12px;font-size:14px;color:var(--muted)">
+              <li style="display:flex;gap:11px"><i class="bi bi-check-circle-fill gold" style="margin-top:3px;flex-shrink:0"></i><span>What the job involves, in your own words</span></li>
+              <li style="display:flex;gap:11px"><i class="bi bi-check-circle-fill gold" style="margin-top:3px;flex-shrink:0"></i><span>Where the site or system is located</span></li>
+              <li style="display:flex;gap:11px"><i class="bi bi-check-circle-fill gold" style="margin-top:3px;flex-shrink:0"></i><span>Any deadline you are working to</span></li>
+              <li style="display:flex;gap:11px"><i class="bi bi-check-circle-fill gold" style="margin-top:3px;flex-shrink:0"></i><span>A budget range, if you have one in mind</span></li>
+              <li style="display:flex;gap:11px"><i class="bi bi-check-circle-fill gold" style="margin-top:3px;flex-shrink:0"></i><span>Photos, drawings or documents, if available</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+
+      <span class="eyebrow"><i class="bi bi-briefcase"></i> Companies &amp; Positions</span>
+      <h2 class="h2">Where I currently serve</h2>
+      <p class="muted" style="margin-top:16px;max-width:660px;font-size:15px;line-height:1.8">
+        Alongside my own work, I hold leadership positions in five companies. Each one below has its own website —
+        click any row to visit it directly. Replace the links with the correct external URLs before publishing.
+      </p>
+
+      <div class="co-list">
+
+        <a href="#" target="_blank" rel="noopener" class="co-row">
+          <span class="co-mark">CS</span>
+          <div class="co-info">
+            <h4>Crystal Standards</h4>
+            <span>IT Director</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right co-go"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="co-row">
+          <span class="co-mark">EL</span>
+          <div class="co-info">
+            <h4>E-light Technology.co</h4>
+            <span>Chief Executive Officer</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right co-go"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="co-row">
+          <span class="co-mark">BD</span>
+          <div class="co-info">
+            <h4>Balisto Design and Construction</h4>
+            <span>Managing Director</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right co-go"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="co-row">
+          <span class="co-mark">EA</span>
+          <div class="co-info">
+            <h4>E-light Tech Academy</h4>
+            <span>Chief Executive Officer</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right co-go"></i>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="co-row">
+          <span class="co-mark">AD</span>
+          <div class="co-info">
+            <h4>Admark's Electronics</h4>
+            <span>Manager</span>
+          </div>
+          <i class="bi bi-box-arrow-up-right co-go"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div style="max-width:760px;margin:0 auto">
+
+        <div style="text-align:center">
+          <span class="eyebrow"><i class="bi bi-question-circle"></i> Common Questions</span>
+          <h2 class="h2">Answers before you ask</h2>
+          <p class="lead" style="margin-top:16px">A few things people ask most often.</p>
+        </div>
+
+        <div class="faq">
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              How quickly do you reply?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Normally within one working day. For urgent electrical faults, WhatsApp usually gets the fastest
+                response. If I am on site or in a lecture, there may be a delay of a few hours — but every message
+                gets an answer.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              Do you give free quotations?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes. For most jobs, I assess what is needed and give you a written quotation at no cost. For
+                larger projects that require design work or a full site survey, there may be a small assessment
+                fee — but I will tell you clearly before anything begins, so there are no surprises.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              Can you work outside Akwa Ibom and Cross River?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes. I work across all of Nigeria and I take remote software and consulting work worldwide.
+                For on-site installations outside my home region, travel and logistics are included in the
+                quotation so you know the full cost upfront.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              What payment terms do you work with?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>It depends on the size of the job. Small repairs and installations are usually paid on
+                completion. Larger projects typically run on a milestone basis — a deposit to begin, staged
+                payments as work progresses, and the balance on handover. Everything is agreed in writing before
+                work starts.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              Do you offer a guarantee on your work?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes. Installation work carries a workmanship guarantee, and repairs are guaranteed against the
+                specific fault I fixed. If something I worked on fails because of my work, I return and put it
+                right. Manufacturer warranties on equipment are handled separately, and I will help you pursue
+                them.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-q">
+              Can I hire you for tutoring only, not a project?
+              <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Absolutely. Tutoring is a full service in its own right. I teach Further Mathematics, General
+                Mathematics, Physics, Chemistry, Technical Drawing, Computer Science and Basic Electricity —
+                one-on-one or in small groups, in person or online. Contact me with the subject, the level and
+                the exam you are preparing for.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>Not sure which service you need?</h2>
+          <p>Describe the problem in your own words. I will tell you what is involved, what it will cost, and
+            whether I am the right person — no obligation.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#/contact" class="btn-gold"><i class="bi bi-chat-dots"></i> Send a Message</a>
+          <a href="#/services" class="btn-out"><i class="bi bi-list-check"></i> Browse Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+
+      <div>
+        <a href="#/home" class="brand">
+          <span class="brand-mark">JU</span>
+          <span class="brand-text"><strong>Jahno Udonde</strong><small>Engineer · Mathematician</small></span>
+        </a>
+        <p class="small muted" style="margin-top:16px;max-width:320px">
+          Building reliable software, dependable power systems and capable people — from Lagos State,
+          Nigeria, to wherever the work takes me.
+        </p>
+        <div class="socials" style="margin-top:20px">
+          <a href="#" class="soc" style="width:42px;height:42px;font-size:16px" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="soc" style="width:42px;height:42px;font-size:16px" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="soc" style="width:42px;height:42px;font-size:16px" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="soc" style="width:42px;height:42px;font-size:16px" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+          <a href="https://wa.me/+2349064710964" class="soc" style="width:42px;height:42px;font-size:16px" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="foot-list">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/about">About Me</a></li>
+          <li><a href="#/services">Services</a></li>
+          <li><a href="#/blog">Blog</a></li>
+          <li><a href="#/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Services</h4>
+        <ul class="foot-list">
+          <li><a href="#/services/software">Software &amp; Web</a></li>
+          <li><a href="#/services/engineering">Electrical Installation</a></li>
+          <li><a href="#/services/engineering">Solar &amp; Inverter</a></li>
+          <li><a href="#/services/academy">Academy &amp; Tutoring</a></li>
+          <li><a href="#/services/sales">Sales &amp; Supplies</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get in Touch</h4>
+        <ul class="foot-list">
+          <li><i class="bi bi-telephone"></i><a href="tel:+2349014015217">+234 901 4015 217</a></li>
+          <li><i class="bi bi-whatsapp"></i><a href="https://wa.me/+2349064710964">WhatsApp</a></li>
+          <li><i class="bi bi-envelope"></i><a href="mailto:elighttechnology.co@gmail.com">elighttechnology.co@gmail.com</a></li>
+          <li><i class="bi bi-geo-alt"></i>Ikorodu LGA, Lagos State, Nigeria</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="foot-bottom">
+      <p>&copy; <span id="year">2025</span> Jahno Udonde. All rights reserved.</p>
+      <p>Designed and Developed by Jahno Udonde.</p>
+    </div>
+  </div>
+</footer>
+
+<button id="backTop" class="back-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<div id="toast" class="notice" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  var DAYS   = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  function escXml(s){
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  /* ---- image placeholders ---- */
+  var PALETTE = [
+    ['#16233d','#0b1220'],['#1e2f4d','#0b1220'],['#233a5e','#0f1a2e'],
+    ['#2a1f3d','#0b1220'],['#0f2e33','#08151a'],['#3a2a12','#0b1220']
+  ];
+  function placeholder(label, i){
+    var p = PALETTE[i % PALETTE.length];
+    var svg =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">' +
+        '<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">' +
+          '<stop offset="0" stop-color="' + p[0] + '"/><stop offset="1" stop-color="' + p[1] + '"/>' +
+        '</linearGradient></defs>' +
+        '<rect width="1200" height="900" fill="url(#g)"/>' +
+        '<circle cx="980" cy="160" r="290" fill="rgba(245,165,36,.09)"/>' +
+        '<circle cx="180" cy="760" r="220" fill="rgba(245,165,36,.06)"/>' +
+        '<text x="600" y="440" fill="#ffc75f" font-family="Sora,Segoe UI,Arial,sans-serif" font-size="42" font-weight="700" text-anchor="middle">' + escXml(label) + '</text>' +
+        '<text x="600" y="492" fill="rgba(255,255,255,.35)" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="19" text-anchor="middle">Replace with your own photo</text>' +
+      '</svg>';
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+  }
+  document.querySelectorAll('img[data-ph]').forEach(function (img, i) {
+    function fail(){
+      if (img.dataset.phDone) return;
+      img.dataset.phDone = '1';
+      img.src = placeholder(img.dataset.ph, i);
+    }
+    if (img.complete && img.naturalWidth === 0) fail();
+    else img.addEventListener('error', fail);
+  });
+
+  /* ---- live clock ---- */
+  var timeEl = document.getElementById('liveTime');
+  var dateEl = document.getElementById('liveDate');
+  function tick(){
+    var d = new Date();
+    var h = d.getHours(), ampm = h >= 12 ? 'PM' : 'AM', h12 = h % 12 || 12;
+    timeEl.textContent = pad(h12) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()) + ' ' + ampm;
+    dateEl.textContent = DAYS[d.getDay()] + ', ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ---- calendar ---- */
+  var calWrap  = document.getElementById('calWrap');
+  var calBtn   = document.getElementById('calBtn');
+  var calPanel = document.getElementById('calPanel');
+  var calTitle = document.getElementById('calTitle');
+  var calDays  = document.getElementById('calDays');
+
+  var view = new Date(); view.setDate(1);
+  var pinned = false, closeTimer = null;
+
+  function renderCal(){
+    var y = view.getFullYear(), m = view.getMonth();
+    calTitle.textContent = MONTHS[m] + ' ' + y;
+    var firstDow = new Date(y, m, 1).getDay();
+    var daysIn   = new Date(y, m + 1, 0).getDate();
+    var prevIn   = new Date(y, m, 0).getDate();
+    var today    = new Date();
+    var html = '';
+    for (var i = 0; i < 42; i++){
+      var dayNum, cls = '', d;
+      if (i < firstDow){ dayNum = prevIn - firstDow + i + 1; cls = 'mute'; d = new Date(y, m - 1, dayNum); }
+      else if (i < firstDow + daysIn){ dayNum = i - firstDow + 1; d = new Date(y, m, dayNum); }
+      else { dayNum = i - firstDow - daysIn + 1; cls = 'mute'; d = new Date(y, m + 1, dayNum); }
+      if (d.toDateString() === today.toDateString()) cls += ' today';
+      var iso = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+      html += '<button type="button" class="' + cls.trim() + '" data-d="' + iso + '">' + dayNum + '</button>';
+    }
+    calDays.innerHTML = html;
+  }
+  function openCal(){ calPanel.classList.add('open'); calBtn.setAttribute('aria-expanded','true'); }
+  function closeCal(){ calPanel.classList.remove('open'); calBtn.setAttribute('aria-expanded','false'); }
+  function scheduleClose(){ clearTimeout(closeTimer); closeTimer = setTimeout(function(){ if(!pinned) closeCal(); }, 200); }
+
+  calWrap.addEventListener('mouseenter', function(){ clearTimeout(closeTimer); if(!pinned) openCal(); });
+  calWrap.addEventListener('mouseleave', scheduleClose);
+  calPanel.addEventListener('mouseenter', function(){ clearTimeout(closeTimer); });
+  calPanel.addEventListener('mouseleave', scheduleClose);
+  calBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    pinned = !pinned;
+    if (pinned) openCal(); else closeCal();
+  });
+  calPanel.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', function(){ if (pinned){ pinned = false; closeCal(); } });
+
+  document.getElementById('calPrev').addEventListener('click', function(){ view.setMonth(view.getMonth() - 1); renderCal(); });
+  document.getElementById('calNext').addEventListener('click', function(){ view.setMonth(view.getMonth() + 1); renderCal(); });
+  document.getElementById('calToday').addEventListener('click', function(){ view = new Date(); view.setDate(1); renderCal(); });
+  calDays.addEventListener('click', function(e){
+    var b = e.target.closest('button'); if (!b) return;
+    calDays.querySelectorAll('button').forEach(function(x){ x.classList.remove('picked'); });
+    b.classList.add('picked');
+  });
+  renderCal();
+
+  /* ---- mobile menu ---- */
+  var menu   = document.getElementById('menu');
+  var burger = document.getElementById('burger');
+  function closeMenu(){
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.innerHTML = '<i class="bi bi-list"></i>';
+  }
+  burger.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.innerHTML = open ? '<i class="bi bi-x-lg"></i>' : '<i class="bi bi-list"></i>';
+  });
+  document.addEventListener('click', function(e){
+    if (!menu.contains(e.target) && e.target !== burger) closeMenu();
+  });
+
+  /* ---- toast ---- */
+  var toastEl = document.getElementById('toast');
+  var toastTimer = null;
+  function toast(msg, isError){
+    toastEl.innerHTML = (isError ? '<i class="bi bi-exclamation-triangle-fill"></i>' : '<i class="bi bi-check-circle-fill"></i>') +
+                        '<span>' + msg + '</span>';
+    toastEl.classList.toggle('err', !!isError);
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('show'); }, 5200);
+  }
+
+  /* ==========================================================
+     ROUTER
+     ========================================================== */
+  var PAGES  = ['home','about','services','blog','contact'];
+  var TITLES = {
+    home:     'Jahno Udonde | Engineer, Mathematician & Computer Scientist',
+    about:    'About | Jahno Udonde',
+    services: 'Services | Jahno Udonde',
+    blog:     'Blog | Jahno Udonde',
+    contact:  'Contact | Jahno Udonde'
+  };
+
+  function headerOffset(){
+    /* sticky header height + (if services page) sticky sub-nav */
+    var head = document.querySelector('.site-head');
+    var h = head ? head.getBoundingClientRect().height : 102;
+    var bar = document.querySelector('.svc-nav-bar');
+    if (bar && bar.offsetParent !== null) h += bar.getBoundingClientRect().height;
+    return h + 16;
+  }
+
+  function showPage(name, anchor){
+    if (PAGES.indexOf(name) < 0) name = 'home';
+
+    document.querySelectorAll('[data-page]').forEach(function (sec) {
+      sec.classList.toggle('is-active', sec.getAttribute('data-page') === name);
+    });
+
+    document.querySelectorAll('.menu a[data-route]').forEach(function (a) {
+      a.classList.toggle('is-active', a.getAttribute('data-route') === name);
+    });
+
+    document.title = TITLES[name] || TITLES.home;
+
+    if (anchor) {
+      setTimeout(function () {
+        var el = document.getElementById(anchor);
+        if (el) {
+          var top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset() - 40;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }, 160);
+      return;
+    }
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  function route(){
+    var raw   = location.hash.replace(/^#\/?/, '');
+    var parts = raw.split('/');
+    showPage(parts[0] || 'home', parts[1] || '');
+    closeMenu();
+  }
+
+  window.addEventListener('hashchange', route);
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#/"]') : null;
+    if (!a) return;
+    if (a.getAttribute('href') === location.hash) {
+      e.preventDefault();
+      route();
+    }
+  });
+
+  /* ---- smooth scroll for on-page anchors ---- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    if (a.getAttribute('href').indexOf('#/') === 0) return;
+    a.addEventListener('click', function (e) {
+      var id = a.getAttribute('href');
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset() - 40;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+      history.replaceState(null, '', id);
+      closeMenu();
+    });
+  });
+
+  /* ==========================================================
+     HERO SLIDER
+     ========================================================== */
+  var slider = document.getElementById('heroSlider');
+  if (slider) {
+    var slides   = Array.prototype.slice.call(slider.querySelectorAll('.slide'));
+    var dotsWrap = slider.querySelector('[data-dots]');
+    var bar      = slider.querySelector('[data-bar]');
+    var DURATION = 10000;
+    var cur      = 0;
+    var timer    = null;
+    var paused   = false;
+
+    slides.forEach(function (s, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'dot' + (i === 0 ? ' on' : '');
+      b.setAttribute('aria-label', 'Go to image ' + (i + 1));
+      b.addEventListener('click', function () { go(i); });
+      dotsWrap.appendChild(b);
+    });
+
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function restartBar(){
+      if (!bar) return;
+      bar.style.animation = 'none';
+      void bar.offsetWidth;
+      bar.style.animation = '';
+      bar.style.animationPlayState = paused ? 'paused' : '';
+    }
+    function paint(){
+      slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); });
+      dots.forEach(function (d, i) { d.classList.toggle('on', i === cur); });
+      restartBar();
+    }
+    function restartTimer(){
+      clearInterval(timer);
+      if (!paused) timer = setInterval(function () { go(cur + 1); }, DURATION);
+    }
+    function go(i){
+      cur = (i + slides.length) % slides.length;
+      paint();
+      restartTimer();
+    }
+
+    slider.querySelector('[data-next]').addEventListener('click', function () { go(cur + 1); });
+    slider.querySelector('[data-prev]').addEventListener('click', function () { go(cur - 1); });
+
+    slider.addEventListener('mouseenter', function () {
+      paused = true;
+      clearInterval(timer);
+      if (bar) bar.style.animationPlayState = 'paused';
+    });
+    slider.addEventListener('mouseleave', function () {
+      paused = false;
+      if (bar) bar.style.animationPlayState = '';
+      go(cur);
+    });
+
+    paint();
+    restartTimer();
+  }
+
+  /* ==========================================================
+     SERVICE CARD MINI GALLERIES — click to change
+     ========================================================== */
+  document.querySelectorAll('.svc-media[data-gallery]').forEach(function (gallery) {
+    var slides  = gallery.querySelectorAll('.gal-slide');
+    if (slides.length < 2) return;
+
+    var dotsWrap = gallery.querySelector('[data-gal-dots]');
+    var prevBtn  = gallery.querySelector('[data-gal-prev]');
+    var nextBtn  = gallery.querySelector('[data-gal-next]');
+    var cur = 0;
+    var dots = [];
+
+    slides.forEach(function (slide, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'gal-dot' + (i === 0 ? ' on' : '');
+      dot.setAttribute('aria-label', 'Show image ' + (i + 1) + ' of ' + slides.length);
+      dot.addEventListener('click', function (e) { e.stopPropagation(); go(i); });
+      dotsWrap.appendChild(dot);
+      dots.push(dot);
+    });
+
+    function go(i) {
+      cur = (i + slides.length) % slides.length;
+      slides.forEach(function (s, k) { s.classList.toggle('is-active', k === cur); });
+      dots.forEach(function (d, k) { d.classList.toggle('on', k === cur); });
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function (e) { e.stopPropagation(); go(cur - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function (e) { e.stopPropagation(); go(cur + 1); });
+
+    gallery.addEventListener('click', function (e) {
+      if (e.target.closest('.gal-arrow') ||
+          e.target.closest('.gal-dot')   ||
+          e.target.closest('.svc-badge')) return;
+      go(cur + 1);
+    });
+
+    gallery.setAttribute('tabindex', '0');
+    gallery.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); go(cur - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(cur + 1); }
+    });
+  });
+
+  /* ==========================================================
+     BLOG FILTER + SEARCH
+     ========================================================== */
+  var filtersWrap = document.getElementById('filters');
+  if (filtersWrap) {
+    var searchInput = document.getElementById('blogSearch');
+    var postGrid    = document.getElementById('postGrid');
+    var emptyState  = document.getElementById('emptyState');
+    var resultCount = document.getElementById('resultCount');
+    var clearBtn    = document.getElementById('clearFilters');
+
+    var posts = Array.prototype.slice.call(postGrid.querySelectorAll('.post-card'));
+    var activeCat = 'all';
+
+    function applyFilters(){
+      var q = (searchInput.value || '').trim().toLowerCase();
+      var shown = 0;
+
+      posts.forEach(function (post) {
+        var cat  = post.getAttribute('data-cat') || '';
+        var text = ((post.getAttribute('data-search') || '') + ' ' +
+                    (post.textContent || '')).toLowerCase();
+
+        var matchCat = (activeCat === 'all') || (cat === activeCat);
+        var matchQ   = !q || text.indexOf(q) > -1;
+
+        if (matchCat && matchQ) { post.style.display = ''; shown++; }
+        else { post.style.display = 'none'; }
+      });
+
+      resultCount.textContent = shown;
+      emptyState.style.display = shown ? 'none' : 'block';
+    }
+
+    filtersWrap.addEventListener('click', function (e) {
+      var btn = e.target.closest('button[data-filter]');
+      if (!btn) return;
+      activeCat = btn.getAttribute('data-filter');
+      filtersWrap.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('on', b === btn);
+      });
+      applyFilters();
+    });
+
+    var searchTimer = null;
+    searchInput.addEventListener('input', function () {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(applyFilters, 160);
+    });
+
+    clearBtn.addEventListener('click', function () {
+      activeCat = 'all';
+      searchInput.value = '';
+      filtersWrap.querySelectorAll('button').forEach(function (b) {
+        b.classList.toggle('on', b.getAttribute('data-filter') === 'all');
+      });
+      applyFilters();
+      searchInput.focus();
+    });
+
+    applyFilters();
+  }
+
+  /* ==========================================================
+     NEWSLETTER FORM
+     ========================================================== */
+  document.querySelectorAll('form[data-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('[type="submit"]');
+      var original = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending…';
+
+      setTimeout(function () {
+        btn.disabled = false;
+        btn.innerHTML = original;
+        form.reset();
+        toast('Thank you — you are on the list. You will hear from me when something new is published.');
+      }, 900);
+    });
+  });
+
+  /* ==========================================================
+     CONTACT FORM
+     ========================================================== */
+  var form = document.getElementById('mainContactForm');
+  if (form) {
+    var submitBtn = document.getElementById('submitBtn');
+    var EMAIL_RE  = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    var PHONE_RE  = /^[+]?[\d\s().-]{7,20}$/;
+
+    function fieldOf(input){ return input.closest('[data-field]'); }
+
+    function validateField(input){
+      var wrap = fieldOf(input);
+      if (!wrap) return true;
+      var v = (input.value || '').trim();
+      var ok = true;
+
+      if (input.id === 'fName')    ok = v.length >= 2;
+      if (input.id === 'fEmail')   ok = EMAIL_RE.test(v);
+      if (input.id === 'fPhone')   ok = v === '' || PHONE_RE.test(v);
+      if (input.id === 'fService') ok = v !== '';
+      if (input.id === 'fSubject') ok = v.length >= 2;
+      if (input.id === 'fMessage') ok = v.length >= 20;
+
+      wrap.classList.toggle('error', !ok);
+      return ok;
+    }
+
+    function validateAll(){
+      var inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+      var firstBad = null;
+      var allOk = true;
+      inputs.forEach(function(inp){
+        var ok = validateField(inp);
+        if (!ok && !firstBad) firstBad = inp;
+        if (!ok) allOk = false;
+      });
+      if (firstBad) firstBad.focus();
+      return allOk;
+    }
+
+    form.querySelectorAll('input, select, textarea').forEach(function (el) {
+      el.addEventListener('blur', function () {
+        if ((el.value || '').trim() !== '' || el.hasAttribute('required')) validateField(el);
+      });
+      el.addEventListener('input', function () {
+        var wrap = fieldOf(el);
+        if (wrap && wrap.classList.contains('error')) validateField(el);
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (form.querySelector('#fWebsite').value !== '') {
+        toast('Message received.', false);
+        form.reset();
+        return;
+      }
+
+      if (!validateAll()) {
+        toast('Please correct the highlighted fields and try again.', true);
+        return;
+      }
+
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Formspree responded ' + res.status);
+        return res;   /* 2xx is enough — no JSON parsing required */
+      })
+      .then(function () {
+        /* Capture the first name BEFORE resetting */
+        var firstName = '';
+        try {
+          firstName = (form.querySelector('#fName').value || '').trim().split(' ')[0] || '';
+        } catch (e) {}
+
+        /* 1. Clear the form FIRST */
+        form.reset();
+        form.querySelectorAll('[data-field]').forEach(function (w) { w.classList.remove('error'); });
+
+        /* 2. Restore the button state */
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+
+        /* 3. Swap the form for the success panel */
+        form.style.display = 'none';
+        var successPanel = document.getElementById('formSuccess');
+        if (successPanel) {
+          successPanel.style.display = 'flex';
+          successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        /* 4. Extra confirmation toast */
+        toast('Thank you' + (firstName ? ', ' + firstName : '') +
+              ' — your message has been delivered successfully.', false);
+      })
+      .catch(function (err) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+        console.error('Formspree error:', err);
+        toast('Sorry — the message could not be sent. Please try WhatsApp or email instead.', true);
+      });
+    });
+        var sendAnotherBtn = document.getElementById('sendAnother');
+    if (sendAnotherBtn) {
+      sendAnotherBtn.addEventListener('click', function () {
+        var successPanel = document.getElementById('formSuccess');
+        if (successPanel) successPanel.style.display = 'none';
+        form.style.display = '';
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(function () { form.querySelector('#fName').focus(); }, 400);
+      });
+    }
+          var original = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending…';
+
+      setTimeout(function () {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+
+        var name = form.querySelector('#fName').value.trim().split(' ')[0] || 'there';
+        toast('Thank you, ' + name + ' — your message has been received. I will reply within one working day.', false);
+        form.reset();
+
+        form.querySelectorAll('[data-field]').forEach(function (w) {
+          w.classList.remove('error');
+        });
+      }, 1100);
+  }
+
+  /* ==========================================================
+     FAQ ACCORDION
+     ========================================================== */
+  document.querySelectorAll('.faq-item').forEach(function (item) {
+    var q = item.querySelector('.faq-q');
+    q.addEventListener('click', function () {
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  var firstFaq = document.querySelector('.faq-item');
+  if (firstFaq) firstFaq.classList.add('open');
+
+  /* ---- back to top ---- */
+  var backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    backTop.classList.toggle('on', window.scrollY > 520);
+  }, { passive: true });
+  backTop.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+
+  /* ---- escape ---- */
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ pinned = false; closeCal(); closeMenu(); }
+  });
+
+  /* ---- init ---- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+  route();
+})();
+</script>
+
+</body>
+</html>
